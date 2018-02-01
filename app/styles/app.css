@@ -1,0 +1,139 @@
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+p  {
+  font-family: "avenir";
+}
+
+.container {
+  /*width: 990px!important;*/
+}
+
+button {
+  background: #4A4A4A;
+  color: white;
+  font-family: "avenir";
+  border: 0px;
+}
+
+.wrapper {
+  position: relative;
+  width: 1000px;
+  height: 715px;
+}
+
+#cf4a {
+  position: relative;
+  height: 527px;
+    width: 100%;
+    margin: 0 auto;
+  top: 0;
+  transform: translate(15.4%, 34.9%);
+
+}
+
+
+.orange-card {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  transform: translate(-11.5%, 46%);
+  background-color: #F5A623;
+  height: 400px;
+  width: 50%;
+  opacity: 0.9;
+  /*min-width: 40rem;
+  max-width: 40rem;*/
+  flex-wrap: wrap;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+#cf4a img {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 357px;
+  height: 400px;
+  -webkit-animation-name: cf4FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+  -moz-animation-name: cf4FadeInOut;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 8s;
+  -o-animation-name: cf4FadeInOut;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 8s;
+  animation-name: cf4FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  max-width: 40rem;
+  min-width: 15rem;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.bkimg {
+  background-image: url('/img/background-img.png');
+  height: 100vh;
+}
+
+
+@keyframes cf4FadeInOut {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+#cf4a img:nth-of-type(1) {
+  animation-delay: 20s;
+}
+#cf4a img:nth-of-type(2) {
+  animation-delay: 18s;
+}
+#cf4a img:nth-of-type(3) {
+  animation-delay: 16s;
+}
+#cf4a img:nth-of-type(4) {
+  animation-delay: 14s;
+}
+#cf4a img:nth-of-type(5) {
+  animation-delay: 12s;
+}
+#cf4a img:nth-of-type(6) {
+  animation-delay: 10s;
+}
+#cf4a img:nth-of-type(7) {
+  animation-delay: 8s;
+}
+#cf4a img:nth-of-type(8) {
+  animation-delay: 6s;
+}
+#cf4a img:nth-of-type(9) {
+  animation-delay: 4s;
+}
+#cf4a img:nth-of-type(10) {
+  animation-delay: 2s;
+}
+#cf4a img:nth-of-type(11) {
+  animation-delay: 0;
+}
