@@ -36,6 +36,7 @@ button {
 }
 
 
+
 .orange-card {
   position: absolute;
   top: 0%;
@@ -51,6 +52,7 @@ button {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
+
 
 #cf4a img {
   position: absolute;
@@ -135,5 +137,98 @@ button {
   animation-delay: 2s;
 }
 #cf4a img:nth-of-type(11) {
+  animation-delay: 0;
+}
+
+
+/*Mobile Version*/
+
+
+#mbcf4a {
+  position: relative;
+  height: 527px;
+  width: 100%;
+  margin: 0 auto;
+  top: 0;
+
+}
+
+
+.mb-orange-card {
+  background-color: #F5A623;
+  opacity: 0.9;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  margin-top: -2rem;
+}
+
+
+#mbcf4a img {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+  min-height: 400px;
+  -webkit-animation-name: cf4FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+  -moz-animation-name: cf4FadeInOut;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 8s;
+  -o-animation-name: cf4FadeInOut;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 8s;
+  animation-name: cf4FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  max-width: 40rem;
+  min-width: 15rem;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+
+
+#mbcf4a img:nth-of-type(1) {
+  animation-delay: 20s;
+}
+#mbcf4a img:nth-of-type(2) {
+  animation-delay: 18s;
+}
+#mbcf4a img:nth-of-type(3) {
+  animation-delay: 16s;
+}
+#mbcf4a img:nth-of-type(4) {
+  animation-delay: 14s;
+}
+#mbcf4a img:nth-of-type(5) {
+  animation-delay: 12s;
+}
+#mbcf4a img:nth-of-type(6) {
+  animation-delay: 10s;
+}
+#mbcf4a img:nth-of-type(7) {
+  animation-delay: 8s;
+}
+#mbcf4a img:nth-of-type(8) {
+  animation-delay: 6s;
+}
+#mbcf4a img:nth-of-type(9) {
+  animation-delay: 4s;
+}
+#mbcf4a img:nth-of-type(10) {
+  animation-delay: 2s;
+}
+#mbcf4a img:nth-of-type(11) {
   animation-delay: 0;
 }
