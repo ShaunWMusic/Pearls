@@ -84,7 +84,7 @@ button {
 
 .bkimg {
   background-image: url('/img/background-img.png');
-  height: 100vh;
+  height: 100%;
 }
 
 
