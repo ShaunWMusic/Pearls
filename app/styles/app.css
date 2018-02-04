@@ -16,6 +16,10 @@ p  {
   /*width: 990px!important;*/
 }
 
+input {
+  padding-left: 10px;
+}
+
 button {
   background: #4A4A4A;
   color: white;
