@@ -1,3 +1,7 @@
+body {
+  /*overflow-x: hidden;*/
+}
+
 form {
   display: flex;
   justify-content: center;
@@ -85,6 +89,7 @@ button {
 .bkimg {
   background-image: url('/img/background-img.png');
   height: 100%;
+  overflow-y: hidden;
 }
 
 
