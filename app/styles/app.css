@@ -21,6 +21,7 @@ button {
   color: white;
   font-family: "avenir";
   border: 0px;
+  padding: 10px;
 }
 
 .wrapper {
