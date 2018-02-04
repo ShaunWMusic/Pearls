@@ -157,13 +157,15 @@ button {
 .mb-orange-card {
   background-color: #F5A623;
   opacity: 0.9;
-  /*border-top-right-radius: 25px;*/
   border-bottom-right-radius: 25px;
-  /*border-top-left-radius: 25px;*/
   border-bottom-left-radius: 25px;
   margin-top: -2rem;
   margin-top: -7.4rem;
   margin-bottom: 6rem;
+  max-width: 40rem;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
 }
 
 
