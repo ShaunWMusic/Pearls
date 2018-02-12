@@ -146,9 +146,9 @@ button {
 #cf4a img:nth-of-type(10) {
   animation-delay: 2s;
 }
-#cf4a img:nth-of-type(11) {
+/*#cf4a img:nth-of-type(11) {
   animation-delay: 0;
-}
+}*/
 
 
 /*Mobile Version*/
@@ -243,6 +243,6 @@ button {
 #mbcf4a img:nth-of-type(10) {
   animation-delay: 2s;
 }
-#mbcf4a img:nth-of-type(11) {
+/*#mbcf4a img:nth-of-type(11) {
   animation-delay: 0;
-}
+}*/
