@@ -5,7 +5,7 @@ module.exports = function(environment) {
   let ENV = {
     DS: {
       // localhost
-      host: 'http://127.0.0.1:3333',
+      // host: 'http://127.0.0.1:3333',
       // Production
       host: 'https://pearls-beard-oil-api.herokuapp.com/',
       namespace: 'api',
