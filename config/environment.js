@@ -7,7 +7,7 @@ module.exports = function(environment) {
       // localhost
       // host: 'http://127.0.0.1:3333',
       // Production
-      host: 'https://pearls-beard-oil-api.herokuapp.com/',
+      host: 'https://pearls-beard-oil-api.herokuapp.com',
       namespace: 'api',
     },
     modulePrefix: 'pearls-beard-oil',
