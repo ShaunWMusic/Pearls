@@ -173,7 +173,7 @@ button {
   margin-top: -2rem;
   margin-top: -7.4rem;
   margin-bottom: 6rem;
-  max-width: 40rem;
+  max-width: 36rem;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, 0%);
@@ -204,7 +204,7 @@ button {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-duration: 8s;
-  max-width: 40rem;
+  max-width: 36rem;
   min-width: 15rem;
   /*border-bottom-left-radius: 25px;*/
   border-top-left-radius: 25px;
