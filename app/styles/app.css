@@ -20,6 +20,10 @@ input {
   padding-left: 10px;
 }
 
+input[type="text"] {
+    border-radius: 0px!important;
+  }
+
 button {
   background: #4A4A4A;
   color: white;
@@ -163,6 +167,7 @@ button {
   top: 0;
 
 }
+
 
 
 .mb-orange-card {
