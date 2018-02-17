@@ -176,7 +176,7 @@ button {
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   margin-top: -2rem;
-  margin-top: -7.4rem;
+  margin-top: -11.4rem;
   margin-bottom: 6rem;
   max-width: 36rem;
   left: 50%;
@@ -192,7 +192,7 @@ button {
   margin-right: -50%;
   transform: translate(-50%, 0%);
   width: 100%;
-  min-height: 400px;
+  /*min-height: 400px;*/
   -webkit-animation-name: cf4FadeInOut;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
