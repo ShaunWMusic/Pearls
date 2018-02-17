@@ -179,6 +179,7 @@ button {
   margin-top: -7.4rem;
   margin-bottom: 6rem;
   max-width: 36rem;
+  min-width: 35rem;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, 0%);
