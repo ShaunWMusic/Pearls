@@ -1,5 +1,6 @@
 body {
   /*overflow-x: hidden;*/
+  overflow-y: hidden;
 }
 
 form {
@@ -98,7 +99,7 @@ button {
 
 .bkimg {
   background-image: url('/img/background-img.png');
-  height: 100%;
+  height: 100vh;
   overflow-y: hidden;
 }
 
@@ -160,7 +161,7 @@ button {
 
 
 #mbcf4a {
-  position: relative;
+  /*position: relative;*/
   height: 527px;
   width: 100%;
   margin: 0 auto;
@@ -171,27 +172,30 @@ button {
 
 
 .mb-orange-card {
+  position: absolute;
   background-color: #F5A623;
   opacity: 0.9;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
-  margin-top: -2rem;
-  margin-top: -7.4rem;
+  margin-top: -8.8rem;
   margin-bottom: 6rem;
   max-width: 36rem;
   min-width: 35rem;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, 0%);
+  left: 0%;
+  right: 0%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 
 #mbcf4a img {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, 0%);
+  top: 5%;
+  left: 0%;
+  right: 0%;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   min-height: 400px;
   -webkit-animation-name: cf4FadeInOut;
@@ -212,10 +216,8 @@ button {
   animation-duration: 8s;
   max-width: 36rem;
   min-width: 15rem;
-  /*border-bottom-left-radius: 25px;*/
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  /*border-bottom-right-radius: 25px;*/
 }
 
 
