@@ -9,7 +9,7 @@ h3 {
 }
 
 body {
-  overflow-y: hidden;
+  // overflow-y: hidden;
 }
 
 form {
@@ -20,6 +20,15 @@ form {
 
 p  {
   font-family: "avenir";
+}
+
+a {
+  text-decoration: none;
+  color: #212529!important;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 input {
@@ -263,6 +272,7 @@ button {
 
 /*////////////////////////////*/
 /*///// 992px or more ///////*/
+/*///// Big Screen ///////*/
 /*//////////////////////////*/
 @media (min-width: 992px) {
   .hide992px {
@@ -272,6 +282,7 @@ button {
 
 /*////////////////////////*/
 /*///// 991px width ///////*/
+/*///// Little Screen /////*/
 /*////////////////////////*/
 @media (max-width: 991px) {
   .hide991px {
