@@ -5,8 +5,8 @@
   <h3>Profile Account</h3>
 <p>{{currentUser.user.email}}</p>
 <p>{{currentUser.user.username}}</p>
-<!-- <p>{{currentUser.user.admin}}</p> -->
-<!-- <p>{{currentUser.user.barbershop}}</p> -->
-<!-- <p>{{currentUser.user.customer}}</p> -->
+<p>{{currentUser.user.admin}}</p>
+<p>{{currentUser.user.barbershop}}</p>
+<p>{{currentUser.user.customer}}</p>
 {{#link-to "admin.users.edit" currentUser.user.id class="yellowbutton white"}}Edit{{/link-to}}
 </div>

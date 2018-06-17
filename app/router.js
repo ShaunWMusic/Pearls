@@ -21,6 +21,7 @@ Router.map(function() {
   this.route('register');
   this.route('login');
   this.route('products');
+  this.route('video-announcement');
 });
 
 export default Router;

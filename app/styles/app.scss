@@ -9,7 +9,11 @@ h3 {
 }
 
 body {
-  // overflow-y: hidden;
+  /*overflow-y: hidden;*/
+  margin:0;
+  padding:0;
+  background-color: #eeeeee;
+
 }
 
 form {
@@ -277,9 +281,7 @@ button {
 #mbcf4a img:nth-of-type(10) {
   animation-delay: 2s;
 }
-/*#mbcf4a img:nth-of-type(11) {
-  animation-delay: 0;
-}*/
+
 
 /*////////////////////////////*/
 /*///// 992px or more ///////*/
