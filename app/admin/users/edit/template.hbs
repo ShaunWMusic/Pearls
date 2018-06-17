@@ -1,0 +1,12 @@
+<div style="text-align: center; max-width: 20rem; margin: auto;">
+  {{#simple-form class="card__form" startingValues=model onsubmit=(action "updateForm") as | formValues |}}
+  {{input class="form__input" type="text" required=true id="email"
+  value=formValues.email placeholder="Email"}}<br />
+
+  {{input class="form__input" type="text" required=true id="username"
+  value=formValues.username placeholder="Username"}}<br />
+
+    <button type="submit" class="yellowbutton">Save</button><br />
+{{/simple-form}}
+{{#link-to "admin.users.detail" currentUser.user.id class="yellowbutton"}}Back{{/link-to}}
+</div>

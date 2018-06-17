@@ -1,0 +1,16 @@
+<form onsubmit={{action "login"}}>
+        {{#each errors as |error|}}
+          <div class="error-alert">{{error.detail}}</div>
+        {{/each}}
+        <div class="field">
+          {{input type="text" placeholder="Email" value=email}}
+        </div><br />
+
+        <div class="field">
+          {{input type="password" placeholder="Password" value=password}}
+        </div>
+
+        <div class="form-footer">
+          <button type="submit" class="yellowbutton">Login</button>
+        </div>
+      </form>

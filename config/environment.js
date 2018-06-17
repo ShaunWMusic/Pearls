@@ -3,13 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    DS: {
-      // localhost
-      // host: 'http://127.0.0.1:3333',
-      // Production
-      host: 'https://pearls-beard-oil-api.herokuapp.com',
-      namespace: 'api',
-    },
+
     modulePrefix: 'pearls-beard-oil',
     environment,
     rootURL: '/',
@@ -29,11 +23,17 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-    'ember-simple-auth': {
-      authorizer: 'authorization: token',
-    },
 
-    'ember-simple-auth-token': {}
+    'ember-simple-auth-token': {
+      identificationField: 'email',
+      passwordField: 'password',
+      serverTokenEndpoint: 'http://localhost:3000/session',
+      headers: {
+        'Content-Type': 'application/vnd.api+json',
+        'Accept': 'application/vnd.api+json'
+      },
+      refreshAccessTokens: false
+    }
   };
 
   if (environment === 'development') {
@@ -58,7 +58,6 @@ module.exports = function(environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }
-  ENV['ember-simple-auth-token'].serverTokenEndpoint = `${ENV.DS.host}/api/token-auth`;
 
   return ENV;
 };

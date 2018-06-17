@@ -16,6 +16,17 @@ form {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-footer {
+  margin-top: 3rem;
+}
+
+.field input {
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 p  {
@@ -28,7 +39,7 @@ a {
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 input {
@@ -307,11 +318,14 @@ button {
 /*////////////////////////*/
 .yellowbutton {
   background: #f3a536;
-  color: white;
+  color: white!important;
   padding: 1rem 2.5rem;
   font-size: 18px;
 }
 
+.yellowbutton a {
+  color: white!important;
+}
 
 
 
@@ -362,6 +376,28 @@ button {
 /*////////////////////////*/
 ul {
   list-style: none;
+}
+
+
+.tab {
+  border-right: 1px solid #f3a536;
+  border-left: 1px solid #f3a536;
+  padding: 1px 8px;
+  border-top: 1px solid #f3a536;
+}
+
+.tab:hover a {
+  background: #f3a536!important;
+  color: white!important;
+}
+
+.tab-active {
+  background: #f3a536;
+  color: white!important;
+}
+
+.btn {
+  margin: 0.5rem;
 }
 
 @import "ember-bootstrap/bootstrap";

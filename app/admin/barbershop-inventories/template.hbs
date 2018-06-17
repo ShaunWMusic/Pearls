@@ -1,0 +1,41 @@
+{{#if session.isAuthenticated}}
+{{#link-to 'admin.contacts' class="text-center tab"}}Contacts{{/link-to}}
+{{#link-to 'admin.barbershop_inventories' class="text-center tab tab-active"}}Barbershop Inventories{{/link-to}}
+{{models-table
+  data=model.barbershopInventory
+  columns=columns
+  columnComponents=(hash
+  deleteRow=(component "delete-row-comp" onClick=(action "deleteRecord"))
+  editRow=(component "models-table/cell-edit-toggle" saveRowAction=(action "onSaveRow") cancelRowAction=(action "onCancelRow"))
+)
+  showComponentFooter=showComponentFooter
+  showColumnsDropdown=showColumnsDropdown
+  useFilteringByColumns=useFilteringByColumns
+  showGlobalFilter=showGlobalFilter
+  doFilteringByHiddenColumns=doFilteringByHiddenColumns
+  useNumericPagination=useNumericPagination
+  filteringIgnoreCase=filteringIgnoreCase
+  multipleColumnsSorting=multipleColumnsSorting
+  showPageSize=showPageSize
+}}
+  <table style="width:100%">
+     <form onsubmit={{action "newBarbershop"}}>
+     <tr>
+       <td>{{input class="" type="text" value=model.deliveryDate placeholder="delivery date"}}</td>
+       <td>{{input class="" type="text" value=model.barbershopName placeholder="barbershop name"}}</td>
+       <td>{{input class="" type="text" value=model.beardbark placeholder="beardbark"}}</td>
+       <td>{{input class="" type="text" value=model.sandycheeks placeholder="sandycheeks"}}</td>
+       <td>{{input class="" type="text" value=model.comments placeholder="comments"}}</td>
+       <td>{{input class="" type="text" value=model.contactPerson placeholder="contact person"}}</td>
+       <td>{{input class="" type="text" value=model.totalBeardOilsDelivered placeholder="total oils delivered"}}</td>
+       <td class=""><div><button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 7rem;">Add Shop</button></div></td>
+     </tr>
+     </form>
+  </table>
+  {{else}}
+  <div class="text-center">
+  <h1> Sorry, you do not have admin access. Please login.</h1>
+  {{#link-to 'login'}}Login{{/link-to}}
+  </div>
+
+{{/if}}
