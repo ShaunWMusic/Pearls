@@ -1,0 +1,63 @@
+<div id="scentschedule" class="hidemobile" style="margin-top: 5rem; text-align: center;">
+  <h3 style="margin-bottom: 2rem;">Schedule Your Beard Oil Scents For Each Month</h3>
+{{models-table
+  data=model.scentSchedule
+  columns=columns
+  columnComponents=(hash
+  deleteRow=(component "delete-row-comp" onClick=(action "deleteRecord"))
+  editRow=(component "models-table/cell-edit-toggle" saveRowAction=(action "onSaveRow") cancelRowAction=(action "onCancelRow"))
+)
+  showComponentFooter=showComponentFooter
+  showColumnsDropdown=showColumnsDropdown
+  useFilteringByColumns=useFilteringByColumns
+  showGlobalFilter=showGlobalFilter
+  doFilteringByHiddenColumns=doFilteringByHiddenColumns
+  useNumericPagination=useNumericPagination
+  filteringIgnoreCase=filteringIgnoreCase
+  multipleColumnsSorting=multipleColumnsSorting
+  showPageSize=showPageSize
+}}
+{{#if (gt model.scentSchedule.length 0)}}
+  {{else}}
+  <table style="width:100%">
+     <form onsubmit={{action "newScent"}}>
+     <tr>
+       <td>{{input class="" type="text" value=model.jan placeholder="Jan"}}</td>
+       <td>{{input class="" type="text" value=model.feb placeholder="Feb"}}</td>
+       <td>{{input class="" type="text" value=model.mar placeholder="Mar"}}</td>
+       <td>{{input class="" type="text" value=model.apr placeholder="Apr"}}</td>
+       <td>{{input class="" type="text" value=model.may placeholder="May"}}</td>
+       <td>{{input class="" type="text" value=model.jun placeholder="Jun"}}</td>
+       <td>{{input class="" type="text" value=model.jul placeholder="Jul"}}</td>
+       <td>{{input class="" type="text" value=model.aug placeholder="Aug"}}</td>
+       <td>{{input class="" type="text" value=model.sept placeholder="Sept"}}</td>
+       <td>{{input class="" type="text" value=model.oct placeholder="Oct"}}</td>
+       <td>{{input class="" type="text" value=model.nov placeholder="Nov"}}</td>
+       <td>{{input class="" type="text" value=model.dec placeholder="Dec"}}</td>
+       <td>{{input class="hide" type="text" value=model.userid placeholder="User Id"}}</td>
+       <td class=""><div><button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 7rem;">Add Scent</button></div></td>
+     </tr>
+     </form>
+  </table>
+{{/if}}
+<div style="margin-top: 2rem;">
+  {{#link-to "admin.users.scents" currentUser.user.id class="yellowbutton"}}Back{{/link-to}}
+</div>
+</div>
+<div class="hidedesktop" style="margin: 2rem auto; text-align: center; max-width: 20rem; text-align: right;">
+  <p style="color: red; text-align: center;">To schedule your scents<br /> please login via desktop. Thanks {{fa-icon "smile-o"}}</p>
+{{#each model.scentSchedule as |scents|}}
+  <p>January: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.jan}}</span></p>
+  <p style="padding-top: 1rem;">February: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.feb}}</span></p>
+  <p style="padding-top: 1rem;">March: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.feb}}</span></p>
+  <p style="padding-top: 1rem;">April: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.apr}}</span></p>
+  <p style="padding-top: 1rem;">May: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.may}}</span></p>
+  <p style="padding-top: 1rem;">June: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.jun}}</span></p>
+  <p style="padding-top: 1rem;">July: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.jul}}</span></p>
+  <p style="padding-top: 1rem;">August: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.aug}}</span></p>
+  <p style="padding-top: 1rem;">September: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.sept}}</span></p>
+  <p style="padding-top: 1rem;">October: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.oct}}</span></p>
+  <p style="padding-top: 1rem;">November: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.nov}}</span></p>
+  <p style="padding-top: 1rem;">December: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.dec}}</span></p>
+{{/each}}
+</div>

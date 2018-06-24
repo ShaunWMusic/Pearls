@@ -8,7 +8,24 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('thanks');
+  this.route('signup');
+  this.route('admin', function() {
+    this.route('contacts');
+    this.route('barbershop_inventories');
+    this.route('users', function() {
+      this.route('edit', { path: '/edit/:id' });
+      this.route('detail', { path: '/detail/:id '});
+      this.route('scents', { path: '/scents/:id' });
+      this.route('editscents', { path: '/editscents/:id' });
+    });
+    this.route('customers');
+  });
+  this.route('register');
+  this.route('login');
+  this.route('products');
   this.route('video-announcement');
+
+  this.route('users', function() {});
 });
 
 export default Router;

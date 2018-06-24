@@ -1,0 +1,33 @@
+<form onsubmit={{action "saveUser"}}>
+        <div class="field">
+          {{input type="text" placeholder="Email" value=email}}
+          {{#each errors.email as |error|}}
+            <p class="error-message" style="color: red;">{{error.message}}</p>
+          {{/each}}
+        </div>
+
+        <div class="field">
+          {{input type="text" placeholder="Username" value=username}}
+          {{#each errors.username as |error|}}
+            <p class="error-message" style="color: red;">{{error.message}}</p>
+          {{/each}}
+        </div>
+
+        <div class="field">
+          {{input type="password" placeholder="Password" value=password}}
+          {{#each errors.password as |error|}}
+            <p class="error-message" style="color: red;">{{error.message}}</p>
+          {{/each}}
+        </div>
+
+        <div class="field">
+          {{input type="password" placeholder="Confirm Password" value=passwordConfirmation}}
+          {{#each errors.passwordConfirmation as |error|}}
+            <p class="error-message" style="color: red;">{{error.message}}</p>
+          {{/each}}
+        </div>
+
+        <div class="form-footer">
+          <button type="submit" class="yellowbutton">Create Account</button>
+        </div>
+      </form>
