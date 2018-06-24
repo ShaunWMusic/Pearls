@@ -1,6 +1,6 @@
 <header class="container">
   <nav class="row mt2">
-    <div class="col-8">
+    <div class="col-7">
         {{#link-to 'index'}}<img src="/img/EMAIL-LOGO-ANIMATION.gif" style="max-width: 22rem;" alt="Pearls Beard Oil Logo">{{/link-to}}
     </div>
     <!--/////////////////// -->
@@ -11,11 +11,11 @@
         <li class="col text-center">{{#side-menu-link-to "products"}}PRODUCTS{{/side-menu-link-to}}</li>
         {{#if session.isAuthenticated}}
         <li class="col text-center">{{#side-menu-link-to "admin.users.detail" currentUser.user.id}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
-        <li><a href="#" onclick={{action "logout"}}>Logout</a></li>
+        <li class="col text-center">{{#side-menu-link-to "admin.users.scents" currentUser.user.id}}{{fa-icon "shopping-cart"}}{{/side-menu-link-to}}</li>
+        <li class="col text-center"><a href="#" onclick={{action "logout"}}>Logout</a></li>
         {{else}}
         <li class="col text-center">{{#side-menu-link-to "login"}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
         {{/if}}
-        <!-- <li class="col text-center">{{fa-icon "shopping-cart"}}</li> -->
       </ul>
       {{#side-menu-toggle class="col hide992px justify-content-end mtpoint5 mt500px" id="menuToggle"}}
        <span>MENU {{fa-icon "bars"}}</span>
@@ -35,14 +35,14 @@
 {{#side-menu-toggle id=""}}<div style="margin-left: 2rem; width:24px; ">{{fa-icon "close"}}</div>{{/side-menu-toggle}}
   <ul class="nav">
     <li class="col-12 text-center">{{#side-menu-link-to "index"}}HOME{{/side-menu-link-to}}</li>
-    <li class="col-12 text-center">PRODUCTS</li>
+    <li class="col-12 text-center">{{#side-menu-link-to "products"}}PRODUCTS{{/side-menu-link-to}}</li>
     {{#if session.isAuthenticated}}
-    <li class="col text-center">{{#side-menu-link-to "admin"}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
+    <li class="col-12 text-center">{{#side-menu-link-to "admin.users.detail" currentUser.user.id}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
+    <li class="col-12 text-center">{{#side-menu-link-to "admin.users.scents" currentUser.user.id}}{{fa-icon "shopping-cart"}}{{/side-menu-link-to}}</li>
     <li class="col-12 text-center"><a href="#" onclick={{action "logout"}}>Logout</a></li>
       {{else}}
       <li class="col-12 text-center">{{#side-menu-link-to "login"}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
     {{/if}}
-    <!-- <li class="col-12 text-center">{{fa-icon "shopping-cart"}}</li> -->
   </ul>
 {{/side-menu}}
 {{content-backdrop}}

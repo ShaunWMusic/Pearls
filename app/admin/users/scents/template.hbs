@@ -1,0 +1,26 @@
+<div id="scentschedule" style="margin-top: 5rem; text-align: center;">
+  {{#if currentUser.user.admin}}
+  <h3 style="margin-bottom: 2rem;">All Beard Oil Scents Scheduled For Each Month</h3>
+    {{models-table
+      data=model.scentSchedule
+      columns=columns
+
+      showComponentFooter=showComponentFooter
+      showColumnsDropdown=showColumnsDropdown
+      useFilteringByColumns=useFilteringByColumns
+      showGlobalFilter=showGlobalFilter
+      doFilteringByHiddenColumns=doFilteringByHiddenColumns
+      useNumericPagination=useNumericPagination
+      filteringIgnoreCase=filteringIgnoreCase
+      multipleColumnsSorting=multipleColumnsSorting
+      showPageSize=showPageSize
+    }}
+  {{else}}
+  <h3 style="margin-bottom: 2rem;">Schedule Your Beard Oil Scents For Each Month</h3>
+
+  {{/if}}
+{{#link-to "admin.users.editscents" currentUser.user.id class="yellowbutton white hidemobile"}}Edit{{/link-to}}
+{{#link-to "admin.users.detail" currentUser.user.id class="yellowbutton white hidemobile"}}Back{{/link-to}}
+{{#link-to "admin.users.editscents" currentUser.user.id class="yellowbutton white hidedesktop"}}View{{/link-to}}
+<p style="margin: 2rem auto; color: red; max-width: 20rem;" class="hidedesktop">To edit your scheduled scents please login via desktop or tablet. Thanks! {{fa-icon smile-o}}</p>
+</div>

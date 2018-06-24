@@ -12,13 +12,17 @@
           <h3>CUSTOMIZE YOUR ORDER</h3>
           <div class="text-center" style="border: 1px solid #f3a536; width: 8rem; margin: auto;"></div>
           <div class="row justify-content-center"  style="margin-top: 4rem;">
-            <div class="col-3">
+            <div class="col-sm">
               <img style="max-width: 5rem;" src="./img/IMG_0584.png" alt="">
             </div>
-            <div class="col-4 align-self-center">
-              <p>$13.99 / month</p>
+            <div class="col-sm align-self-center">
+              <p style="margin-top: 2rem;">$13.99 / month</p>
               <p>free shipping, cancel anytime</p>
+          {{#if session.isAuthenticated}}
+            {{#link-to 'admin.users.editscents' currentUser.user.id}}<button class="yellowbutton">Schedule Scents</button>{{/link-to}}
+            {{else}}
             {{#link-to 'register'}}<button class="yellowbutton">Become a Beta Tester</button>{{/link-to}}
+          {{/if}}
             </div>
           </div>
 

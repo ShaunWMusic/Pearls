@@ -1,5 +1,9 @@
 @import "ember-side-menu";
 
+.hide {
+  display: none;
+}
+
 h1 {
   font-weight: 300!important;
 }
@@ -48,6 +52,7 @@ a:hover {
 
 input {
   padding-left: 10px;
+  border: 1px solid #f3a536;
 }
 
 input[type="text"] {
@@ -400,6 +405,26 @@ ul {
 
 .btn {
   margin: 0.5rem;
+}
+
+#scentschedule td {
+  max-width: 6rem;
+}
+
+#scentschedule input {
+  max-width: 6rem;
+}
+
+@media (min-width: 1080px) {
+  .hidedesktop {
+    display: none;
+  }
+}
+
+@media (max-width: 1079px) {
+  .hidemobile {
+    display: none;
+  }
 }
 
 @import "ember-bootstrap/bootstrap";

@@ -7,7 +7,7 @@ export default Controller.extend({
 
       user.save()
       .then(() => {
-        this.transitionToRoute('index');
+        this.transitionToRoute('thanks');
       })
       .catch((e) => {
         this.set('model', attrs);

@@ -1,6 +1,6 @@
 <form onsubmit={{action "login"}}>
         {{#each errors as |error|}}
-          <div class="error-alert">{{error.detail}}</div>
+          <div class="error-alert" style="color: red;">{{error.detail}}</div>
         {{/each}}
         <div class="field">
           {{input type="text" placeholder="Email" value=email}}

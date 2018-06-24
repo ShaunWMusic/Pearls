@@ -15,6 +15,8 @@ Router.map(function() {
     this.route('users', function() {
       this.route('edit', { path: '/edit/:id' });
       this.route('detail', { path: '/detail/:id '});
+      this.route('scents', { path: '/scents/:id' });
+      this.route('editscents', { path: '/editscents/:id' });
     });
     this.route('customers');
   });
@@ -22,6 +24,8 @@ Router.map(function() {
   this.route('login');
   this.route('products');
   this.route('video-announcement');
+
+  this.route('users', function() {});
 });
 
 export default Router;
