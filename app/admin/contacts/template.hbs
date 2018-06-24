@@ -1,6 +1,6 @@
 {{#if session.isAuthenticated}}
 {{#link-to 'admin.contacts' class="text-center tab tab-active"}}Barbers{{/link-to}}
-{{#link-to 'admin.barbershop_inventories' class="text-center tab"}}Barbershop Inventories{{/link-to}}
+{{#link-to 'admin.barbershop_inventories' class="text-center tab"}}Barbershops{{/link-to}}
 {{models-table
   data=model.contacts
   columns=columns

@@ -1,6 +1,6 @@
 {{#if session.isAuthenticated}}
-{{#link-to 'admin.contacts' class="text-center tab"}}Barber{{/link-to}}
-{{#link-to 'admin.barbershop_inventories' class="text-center tab tab-active"}}Barbershop Inventories{{/link-to}}
+{{#link-to 'admin.contacts' class="text-center tab"}}Barbers{{/link-to}}
+{{#link-to 'admin.barbershop_inventories' class="text-center tab tab-active"}}Barbershops{{/link-to}}
 {{models-table
   data=model.barbershopInventory
   columns=columns
@@ -28,7 +28,7 @@
        <td>{{input class="" type="text" value=model.comments placeholder="comments"}}</td>
        <td>{{input class="" type="text" value=model.contactPerson placeholder="contact person"}}</td>
        <td>{{input class="" type="text" value=model.totalBeardOilsDelivered placeholder="total oils delivered"}}</td>
-       <td class=""><div><button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 7rem;">Add Shop</button></div></td>
+       <td class=""><div><button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 7rem;">Add Barbershop</button></div></td>
      </tr>
      </form>
   </table>
