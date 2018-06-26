@@ -1,7 +1,8 @@
 {{#if session.isAuthenticated}}
 {{#link-to 'admin.contacts' class="text-center tab"}}Barbers{{/link-to}}
 {{#link-to 'admin.barbershop_inventories' class="text-center tab tab-active"}}Barbershops{{/link-to}}
-{{models-table
+<div class="hidemobile">
+  {{models-table
   data=model.barbershopInventory
   columns=columns
   columnComponents=(hash
@@ -18,7 +19,8 @@
   multipleColumnsSorting=multipleColumnsSorting
   showPageSize=showPageSize
 }}
-  <table style="width:100%">
+</div>
+  <table class="hidemobile" style="width:100%">
      <form onsubmit={{action "newBarbershop"}}>
      <tr>
        <td>{{input class="" type="text" value=model.deliveryDate placeholder="delivery date"}}</td>
@@ -28,10 +30,31 @@
        <td>{{input class="" type="text" value=model.comments placeholder="comments"}}</td>
        <td>{{input class="" type="text" value=model.contactPerson placeholder="contact person"}}</td>
        <td>{{input class="" type="text" value=model.totalBeardOilsDelivered placeholder="total oils delivered"}}</td>
-       <td class=""><div><button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 7rem;">Add Barbershop</button></div></td>
+       <td class=""><div><button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 7rem;">Add Shop</button></div></td>
      </tr>
      </form>
   </table>
+
+  <!-- ///////////////////////////////////////// -->
+  <!-- /////////////MOBILE VIEW//////////////// -->
+  <!-- ///////////////////////////////////////// -->
+
+  <form id="contactform" class="hidedesktop" style=" justify-content: center; text-align: center;" onsubmit={{action "newBarbershop"}}>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.deliveryDate placeholder="delivery date"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.barbershopName placeholder="barbershop name"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.beardbark placeholder="beardbark"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.sandycheeks placeholder="sandycheeks"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.comments placeholder="comments"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.contactPerson placeholder="contact person"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.totalBeardOilsDelivered placeholder="total oils delivered"}}</div>
+    <button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 11rem; margin: auto;">Add Shop</button>
+  </form>
+  <div class="hidedesktop" style="text-align: left; margin-top: 2rem; border-top: 1px solid black; padding-top: 2rem;">
+    <h3 style="padding-bottom: 2rem;">Barbershop List</h3>
+    {{#each model.barbershopInventory as |view|}}
+      <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Barbershop:</strong> {{view.barbershopName}}</p>
+    {{/each}}
+  </div>
   {{else}}
   <div class="text-center">
   <h1> Sorry, you do not have admin access. Please login.</h1>

@@ -1,5 +1,6 @@
 import Controller from '@ember/controller';
 import {get} from '@ember/object';
+import Ember from 'ember';
 
 export default Controller.extend({
   currentUser: Ember.inject.service(),

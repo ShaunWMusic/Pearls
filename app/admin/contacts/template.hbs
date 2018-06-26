@@ -1,7 +1,12 @@
 {{#if session.isAuthenticated}}
 {{#link-to 'admin.contacts' class="text-center tab tab-active"}}Barbers{{/link-to}}
 {{#link-to 'admin.barbershop_inventories' class="text-center tab"}}Barbershops{{/link-to}}
-{{models-table
+
+<!-- ///////////////////////////////////////// -->
+<!-- /////////////DESKTOP VIEW//////////////// -->
+<!-- ///////////////////////////////////////// -->
+<div class="hidemobile">
+  {{models-table
   data=model.contacts
   columns=columns
   columnComponents=(hash
@@ -18,7 +23,8 @@
   multipleColumnsSorting=multipleColumnsSorting
   showPageSize=showPageSize
 }}
-  <table style="width:100%">
+</div>
+  <table class="hidemobile" style="width:100%">
      <form onsubmit={{action "newContact"}}>
      <tr>
        <td>{{input class="" type="text" value=model.barbershop placeholder="barbershop"}}</td>
@@ -32,6 +38,28 @@
      </tr>
      </form>
   </table>
+  <!-- ///////////////////////////////////////// -->
+  <!-- /////////////MOBILE VIEW//////////////// -->
+  <!-- ///////////////////////////////////////// -->
+
+  <form id="contactform" class="hidedesktop" style=" justify-content: center; text-align: center;" onsubmit={{action "newContact"}}>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.barbershop placeholder="barbershop"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.contactPerson placeholder="contact person"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.phoneNumber placeholder="phone number"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.email placeholder="email"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="textarea" value=model.callLog placeholder="call log"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.website placeholder="website"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.address placeholder="address"}}</div>
+    <button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 7rem; margin: auto;">Add Barber</button>
+  </form>
+  <div class="hidedesktop" style="text-align: left; margin-top: 2rem; border-top: 1px solid black; padding-top: 2rem;">
+    <h3 style="padding-bottom: 2rem;">Barber List</h3>
+    {{#each model.contacts as |view|}}
+      {{#link-to "admin.contact-details" view.id}}
+      <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Contact:</strong> {{view.contactPerson}}</p>
+      {{/link-to}}
+    {{/each}}
+  </div>
   {{else}}
   <div class="text-center">
   <h1> Sorry, you do not have admin access. Please login.</h1>

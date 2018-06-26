@@ -11,6 +11,8 @@ Router.map(function() {
   this.route('signup');
   this.route('admin', function() {
     this.route('contacts');
+    this.route('contact-details', { path: '/contact-details/:id' });
+    this.route('contact-edits', { path: '/contact-edits/:id' });
     this.route('barbershop_inventories');
     this.route('users', function() {
       this.route('edit', { path: '/edit/:id' });

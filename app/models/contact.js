@@ -5,7 +5,7 @@ export default DS.Model.extend({
   contactPerson: DS.attr('string'),
   phoneNumber: DS.attr('string'),
   email: DS.attr('string'),
-  callLog: DS.attr('string'),
+  callLog: DS.attr(),
   website: DS.attr('string'),
   address: DS.attr('string')
 });

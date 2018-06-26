@@ -5,9 +5,9 @@ import { inject as service } from '@ember/service';
 export default DS.JSONAPIAdapter.extend({
   session: service('session'),
   // localhost
-  // host: 'http://localhost:3000',
+  host: 'http://localhost:3000',
   // Production API
-  host: 'https://thawing-tor-75666.herokuapp.com',
+  // host: 'https://thawing-tor-75666.herokuapp.com',
 
   headers: computed(function() {
     let session = this.get('session');

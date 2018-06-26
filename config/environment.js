@@ -27,8 +27,8 @@ module.exports = function(environment) {
     'ember-simple-auth-token': {
       identificationField: 'email',
       passwordField: 'password',
-      // serverTokenEndpoint: 'http://localhost:3000/session',
-      serverTokenEndpoint: 'https://thawing-tor-75666.herokuapp.com/session',
+      serverTokenEndpoint: 'http://localhost:3000/session',
+      // serverTokenEndpoint: 'https://thawing-tor-75666.herokuapp.com/session',
       headers: {
         'Content-Type': 'application/vnd.api+json',
         'Accept': 'application/vnd.api+json'
