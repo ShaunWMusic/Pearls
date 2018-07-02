@@ -2,4 +2,4 @@ The Pearl's Beard Oil team and community are committed to everyone having a safe
 
 Our Community Guidelines / Code of Conduct can be found here:
 
-https://pearlsbeardoil.com/guidelines/
+https://www.pearlsbeardoil.com/guidelines
