@@ -4,8 +4,11 @@ This README outlines the details of collaborating on this Ember application.
 
 Pearl's Beard Oil is a Christian-based company that was created after discovering there are no companies that have zero waste beard oil bottles. When you toss your bottle out, you are creating waste that is hazardous to the environment. But with some research, we found a way to correct it. Our mission is to help you grow a thick, full beard that you’ve always wanted while also keeping the environment clean at an affordable price. Subscribe with us today to start helping yourself and the world at the same time.
 
-We also believe that open sourcing our code is going to create the build tool
-for our customers.
+We also believe that open sourcing our code is going to create the best experience
+for our customers. If you are a developer and you find any bugs with our site feel free
+to create a pull request. If you see the need for a specific new feature you can
+create a pull request with the new feature idea. Please label the branch with
+"your-username-new-feature", so we can keep things organized. Thanks!
 
 ## Pull Request Welcome :)
 [![PRs Welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
