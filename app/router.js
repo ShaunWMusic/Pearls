@@ -28,6 +28,7 @@ Router.map(function() {
   this.route('video-announcement');
 
   this.route('users', function() {});
+  this.route('guidelines');
 });
 
 export default Router;
