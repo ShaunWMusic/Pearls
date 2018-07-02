@@ -3,6 +3,9 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+## Pull Request Welcome :)
+[![PRs Welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
