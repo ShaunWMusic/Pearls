@@ -45,6 +45,11 @@
   <p style="padding-top: 1rem;">December: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.dec}}</span></p>
 {{/each}}
 </div>
-{{#link-to "admin.users.editscents" currentUser.user.id class="yellowbutton white"}}Edit{{/link-to}}
-{{#link-to "admin.users.detail" currentUser.user.id class="yellowbutton white"}}Back{{/link-to}}
+<div style="margin-top: 4rem;">
+  {{#if (gt model.scentSchedule.length 0)}}
+    {{else}}
+  {{#link-to "admin.users.editscents" currentUser.user.id class="yellowbutton white"}}Edit{{/link-to}}
+  {{/if}}
+  {{#link-to "admin.users.detail" currentUser.user.id class="yellowbutton white"}}Back{{/link-to}}
+</div>
 </div>

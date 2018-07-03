@@ -104,6 +104,7 @@ export default Controller.extend({
      user.save()
        .then(() => {
            window.location.reload(true);
+          // this.transitionTo('admin.users.detail');
        });
    },
 
