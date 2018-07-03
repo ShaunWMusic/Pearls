@@ -1,11 +1,6 @@
-{{#if currentUser.user.admin}}
-<div style="margin-top: 2rem;">
-<div class="col-sm" style="">{{#link-to "admin.contacts" class="yellowbutton white"}}Barber Inventory{{/link-to}}</div>
-<div class="col-sm" style="margin-top:2rem;">{{#link-to "admin.users.scents" currentUser.user.id class="yellowbutton white"}}View Scents Scheduled{{/link-to}}</div>
-</div>
-{{/if}}
+
 <div style="text-align: center; max-width: 20rem; margin: 2rem auto;">
-  <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem;">Profile Account</h3>
+  <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem;">Profile Details</h3>
   <p style="text-align: left;">EMAIL:</p>
 <p style="border: 1px solid #f3a536; text-align: left; padding-left: 1rem;">{{currentUser.user.email}}</p>
 <p style="text-align: left;">USERNAME:</p>
@@ -14,20 +9,27 @@
 <!-- <p>{{currentUser.user.barbershop}}</p> -->
 <!-- <p>{{currentUser.user.customer}}</p> -->
 <!-- <p style="margin-bottom: 2rem; padding-bottom: 1rem;">{{#link-to "admin.users.edit" currentUser.user.id class="yellowbutton white"}}Edit Profile{{/link-to}}</p> -->
-<!-- <p style="">{{#link-to "admin.users.scents" currentUser.user.id class="yellowbutton white"}}Schedule Scents{{/link-to}}</p> -->
-<h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem;">Pay Here</h3>
+<h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Schedule Scents</h3>
+<p style="">{{#link-to "admin.users.scents" currentUser.user.id class="yellowbutton white"}}Schedule Scents{{/link-to}}</p>
+<h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Pay Here</h3>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="DDA9VACF32S4E">
-<table>
-<tr><td><input type="hidden" name="on0" value="Scents">Scents</td></tr><tr><td><select name="os0">
-	<option value="Beard Bark">Beard Bark </option>
-	<option value="Sandy Cheeks">Sandy Cheeks </option>
-</select> </td></tr>
-</table>
-<input style="border: none; height: 3rem; width: 9rem; margin: auto; margin-top: 0.5rem;" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<input type="hidden" name="hosted_button_id" value="XR6YKTYMJQB4C">
+<input style="border: none; height: 3rem; width: 9rem; margin: auto; margin-top: 0.5rem; padding-left: 0rem;" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-<h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Announcement</h3>
+<div style="margin-top: 2rem;">
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=R75E24W9ASKW2">
+<img style="margin: auto;" src="https://www.paypalobjects.com/en_US/i/btn/btn_unsubscribe_LG.gif" BORDER="0">
+</a>
+</div>
+<h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Announcements</h3>
 <p style="margin-top: 4rem;">{{#link-to "video-announcement" class="yellowbutton white"}}Video Announcement {{fa-icon "video-camera"}}{{/link-to}}</p>
+{{#if currentUser.user.admin}}
+<h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Admin Links</h3>
+<div style="margin-top: 2rem;">
+<div class="col-sm" style="">{{#link-to "admin.contacts" class="yellowbutton white"}}Barber Inventory{{/link-to}}</div>
+<div class="col-sm" style="margin-top:2rem;">{{#link-to "admin.users.scents" currentUser.user.id class="yellowbutton white"}}View Scents Scheduled{{/link-to}}</div>
+</div>
+{{/if}}
 </div>
