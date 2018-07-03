@@ -45,19 +45,25 @@
 </div>
 </div>
 <div class="hidedesktop" style="margin: 2rem auto; text-align: center; max-width: 20rem; text-align: right;">
-  <p style="color: red; text-align: center;">To schedule your scents<br /> please login via desktop. Thanks {{fa-icon "smile-o"}}</p>
-{{#each model.scentSchedule as |scents|}}
-  <p>January: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.jan}}</span></p>
-  <p style="padding-top: 1rem;">February: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.feb}}</span></p>
-  <p style="padding-top: 1rem;">March: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.feb}}</span></p>
-  <p style="padding-top: 1rem;">April: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.apr}}</span></p>
-  <p style="padding-top: 1rem;">May: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.may}}</span></p>
-  <p style="padding-top: 1rem;">June: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.jun}}</span></p>
-  <p style="padding-top: 1rem;">July: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.jul}}</span></p>
-  <p style="padding-top: 1rem;">August: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.aug}}</span></p>
-  <p style="padding-top: 1rem;">September: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.sept}}</span></p>
-  <p style="padding-top: 1rem;">October: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.oct}}</span></p>
-  <p style="padding-top: 1rem;">November: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.nov}}</span></p>
-  <p style="padding-top: 1rem;">December: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.dec}}</span></p>
-{{/each}}
+  <!-- <p style="color: red; text-align: center;">To schedule your scents<br /> please login via desktop. Thanks {{fa-icon "smile-o"}}</p> -->
+  <form id="contactform" class="hidedesktop" style=" justify-content: center; text-align: center;" onsubmit={{action "newScent"}}>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.jan placeholder="Jan Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.feb placeholder="Feb Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.mar placeholder="Mar Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.apr placeholder="Apr Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.may placeholder="May Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.jun placeholder="Jun Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.jul placeholder="Jul Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.aug placeholder="Aug Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.sept placeholder="Sept Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.oct placeholder="Oct Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.nov placeholder="Nov Scent"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.dec placeholder="Dec Scent"}}</div>
+    <button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 11rem; margin: auto;">Add Scents</button>
+    <div style="margin-top: 2rem;">
+      {{#link-to "admin.users.scents" currentUser.user.id class="yellowbutton"}}Back{{/link-to}}
+    </div>
+  </form>
+
+
 </div>

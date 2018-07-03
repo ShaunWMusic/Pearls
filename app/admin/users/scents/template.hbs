@@ -1,6 +1,7 @@
-<div id="scentschedule" style="margin-top: 5rem; text-align: center;">
+<div id="scentschedule" class="hidemobile" style="text-align: center; max-width: 40rem; margin: 5rem auto;">
   {{#if currentUser.user.admin}}
-  <h3 style="margin-bottom: 2rem;">All Beard Oil Scents Scheduled For Each Month</h3>
+  <div class="hidemobile">
+    <h3 style="margin-bottom: 2rem;">All Beard Oil Scents Scheduled For Each Month</h3>
     {{models-table
       data=model.scentSchedule
       columns=columns
@@ -15,12 +16,35 @@
       multipleColumnsSorting=multipleColumnsSorting
       showPageSize=showPageSize
     }}
+  </div>
   {{else}}
   <h3 style="margin-bottom: 2rem;">Schedule Your Beard Oil Scents For Each Month</h3>
 
   {{/if}}
-{{#link-to "admin.users.editscents" currentUser.user.id class="yellowbutton white hidemobile"}}Edit{{/link-to}}
-{{#link-to "admin.users.detail" currentUser.user.id class="yellowbutton white hidemobile"}}Back{{/link-to}}
-{{#link-to "admin.users.editscents" currentUser.user.id class="yellowbutton white hidedesktop"}}View{{/link-to}}
-<p style="margin: 2rem auto; color: red; max-width: 20rem;" class="hidedesktop">To edit your scheduled scents please login via desktop or tablet. Thanks! {{fa-icon smile-o}}</p>
+  {{#link-to "admin.users.editscents" currentUser.user.id class="yellowbutton white"}}Edit{{/link-to}}
+  {{#link-to "admin.users.detail" currentUser.user.id class="yellowbutton white"}}Back{{/link-to}}
+  </div>
+<div id="scentschedule" class="hidedesktop" style="text-align: center; max-width: 20rem; margin: 5rem auto;">
+<h3 class="hidedesktop" style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Beard Oil Scent Schedule</h3>
+
+<!-- {{#link-to "admin.users.editscents" currentUser.user.id class="yellowbutton white hidedesktop"}}View{{/link-to}} -->
+<!-- <p style="margin: 2rem auto; color: red; max-width: 20rem;" class="hidedesktop">To edit your scheduled scents please login via desktop or tablet. Thanks! {{fa-icon smile-o}}</p> -->
+<div class="hidedesktop">
+{{#each model.scentSchedule as |scents|}}
+  <p>January: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.jan}}</span></p>
+  <p style="padding-top: 1rem;">February: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.feb}}</span></p>
+  <p style="padding-top: 1rem;">March: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.feb}}</span></p>
+  <p style="padding-top: 1rem;">April: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.apr}}</span></p>
+  <p style="padding-top: 1rem;">May: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.may}}</span></p>
+  <p style="padding-top: 1rem;">June: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.jun}}</span></p>
+  <p style="padding-top: 1rem;">July: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.jul}}</span></p>
+  <p style="padding-top: 1rem;">August: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.aug}}</span></p>
+  <p style="padding-top: 1rem;">September: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.sept}}</span></p>
+  <p style="padding-top: 1rem;">October: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.oct}}</span></p>
+  <p style="padding-top: 1rem;">November: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.nov}}</span></p>
+  <p style="padding-top: 1rem;">December: <span style="border: 1px solid #f3a536; padding: 0.5rem 2rem; margin-left: 1rem;">{{scents.dec}}</span></p>
+{{/each}}
+</div>
+{{#link-to "admin.users.editscents" currentUser.user.id class="yellowbutton white"}}Edit{{/link-to}}
+{{#link-to "admin.users.detail" currentUser.user.id class="yellowbutton white"}}Back{{/link-to}}
 </div>
