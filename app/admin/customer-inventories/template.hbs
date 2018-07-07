@@ -1,0 +1,30 @@
+{{#link-to 'admin.contacts' class="text-center tab"}}Barbers{{/link-to}} 
+{{#link-to 'admin.barbershop_inventories' class="text-cente tab"}}Barbershops{{/link-to}} 
+{{#link-to 'admin.customer_inventories' class="text-center tab tab-active"}}Customers{{/link-to}}
+<div class="hidemobile">
+    {{models-table data=model 
+    columns=columns 
+   
+    showComponentFooter=showComponentFooter 
+    showColumnsDropdown=showColumnsDropdown
+    useFilteringByColumns=useFilteringByColumns
+    showGlobalFilter=showGlobalFilter
+    doFilteringByHiddenColumns=doFilteringByHiddenColumns
+    useNumericPagination=useNumericPagination
+    filteringIgnoreCase=filteringIgnoreCase
+    multipleColumnsSorting=multipleColumnsSorting
+    showPageSize=showPageSize }}
+</div>
+
+
+<!-- ///////////////////////////////////////// -->
+<!-- /////////////MOBILE VIEW//////////////// -->
+<!-- ///////////////////////////////////////// -->
+<div class="hidedesktop" style="text-align: left; margin-top: 2rem; border-top: 1px solid black; padding-top: 2rem;">
+    <h3 style="padding-bottom: 2rem;">Customer List</h3>
+    {{#each model as |view|}}
+    {{model.customer}}
+        <p style="border-bottom: 1px solid black; max-width: 20rem;"><strong>Email:</strong> {{view.email}}</p>
+        {{!-- <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Customer:</strong> {{view.customer}}</p> --}}
+    {{/each}}
+</div>

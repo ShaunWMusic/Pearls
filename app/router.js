@@ -21,6 +21,7 @@ Router.map(function() {
       this.route('editscents', { path: '/editscents/:id' });
     });
     this.route('customers');
+    this.route('customer_inventories');
   });
   this.route('register');
   this.route('login');
