@@ -56,7 +56,7 @@
   <div class="hidedesktop" style="text-align: left; margin-top: 2rem; border-top: 1px solid black; padding-top: 2rem;">
     <h3 style="padding-bottom: 2rem;">Barber List</h3>
     {{#each model.contacts as |view|}}
-      {{#link-to "admin.contact-details" view.id}}
+      {{#link-to "admin.contact-edits" view.id}}
       <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Contact:</strong> {{view.contactPerson}}</p>
       {{/link-to}}
     {{/each}}

@@ -1,0 +1,7 @@
+{
+  "name": "pearls-beard-oil",
+  "dependencies": {
+    "marked": "^0.4.0",
+    "bootbox": "^4.4.0"
+  }
+}

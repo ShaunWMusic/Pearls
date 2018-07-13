@@ -5,9 +5,9 @@ export default Route.extend({
   session: service('session'),
   currentUser: service('current-user'),
 
-  beforeModel() {
+   beforeModel() {
     this._super(...arguments);
-
+    
     this.loadUser();
   },
 

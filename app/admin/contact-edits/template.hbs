@@ -1,6 +1,8 @@
 {{#if session.isAuthenticated}}
 {{#link-to 'admin.contacts' class="text-center tab tab-active"}}Barbers{{/link-to}}
 {{#link-to 'admin.barbershop_inventories' class="text-center tab"}}Barbershops{{/link-to}}
+{{#link-to 'admin.customer_inventories' class="text-center tab"}}Customers{{/link-to}}
+
 <div class="hidedesktop" style="text-align: left; margin-top: 2rem;">
   <h3 style="padding-bottom: 2rem; text-align: center;">Barber Details</h3>
     <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Contact:</strong> {{model.contactPerson}}</p>
@@ -9,8 +11,12 @@
     <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Email:</strong> {{model.email}}</p>
     <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Website:</strong> {{model.website}}</p>
     <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Address:</strong> {{model.address}}</p>
-    <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Call Log:</strong> {{model.callLog}}</p>
 </div>
+<p style="margin-bottom:0rem;"><strong>Call Log:</strong></p>
+{{markdown-editor rows='6' btns='bold,italic,list-ol,list-ul' id="complete-textarea" value=model.callLog}}
+<form id="complete-textarea" onsubmit={{action "updateForm"}}>
+  <input class="yellowbutton" type="submit">
+</form>
 {{else}}
 
 {{/if}}
