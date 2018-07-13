@@ -11,8 +11,7 @@ export default Controller.extend({
 
       this.model.save()
         .then(() => {
-          
-          // window.location.reload(true);
+          window.location.reload(true);
         });
     }
   }
