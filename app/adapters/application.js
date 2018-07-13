@@ -16,7 +16,7 @@ export default DS.JSONAPIAdapter.extend({
       return {
         Authorization: `Bearer ${session.get('data.authenticated.token')}`
       };
-    }
+    } 
 
     return {};
   }),

@@ -13,8 +13,8 @@
     <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Address:</strong> {{model.address}}</p>
 </div>
 <p style="margin-bottom:0rem;"><strong>Call Log:</strong></p>
-{{markdown-editor rows='6' btns='bold,italic,list-ol,list-ul' id="complete-textarea" value=model.callLog}}
-<form id="complete-textarea" onsubmit={{action "updateForm"}}>
+{{textarea row="6" class="calllog" id="complete-textarea" value=model.callLog}}
+<form id="complete-textarea" {{action "updateForm" on="submit"}}  >
   <input class="yellowbutton" type="submit">
 </form>
 {{else}}
