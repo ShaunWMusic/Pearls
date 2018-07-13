@@ -7,7 +7,7 @@
             Our products are made from zero chemicals, so your <br />
             beard can remain healthy as it grows thicker and fuller<br />
             naturally. Browser through our various products that are<br />
-            available in nine different scents for you to enjoy.
+            available in two different scents for you to enjoy.
           </p>
           <h3>CUSTOMIZE YOUR ORDER</h3>
           <div class="text-center" style="border: 1px solid #f3a536; width: 8rem; margin: auto;"></div>
@@ -16,8 +16,10 @@
               <img style="max-width: 5rem;" src="./img/IMG_0584.png" alt="">
             </div>
             <div class="col-sm align-self-center">
-              <p style="margin-top: 2rem;">$13.99 / month</p>
-              <p>free shipping, cancel anytime</p>
+              <p style="margin-top: 0rem; margin-bottom: 0rem">$13.99 / month</p>
+              <p style="margin-top: 0rem; margin-bottom: 0rem">Test 1 of 2 Scents:<br /> <strong>Sandy Cheeks</strong> or <strong>Beard Bark</strong></p>
+              <p style="margin-top: 0rem; margin-bottom: 0rem">15ml / 0.5oz</p>
+              <p style="margin-top: 0rem;">free shipping, cancel anytime</p>
           {{#if session.isAuthenticated}}
             {{#link-to 'admin.users.editscents' currentUser.user.id}}<button class="yellowbutton">Schedule Scents</button>{{/link-to}}
             {{else}}
@@ -25,8 +27,47 @@
           {{/if}}
             </div>
           </div>
-
         </div>
+    </div>
+  </div>
+</section>
+{{!-- <section style="background: #f3a536; color: white; border-top-right-radius: 80%; margin-right: -16rem; overflow-x: hidden;">
+  <div class="container" style="margin-left: 4rem;">
+    <div class="row justify-content-center">
+      <div class="col text-center" style="margin-top: 4rem; margin-bottom: 4rem;">
+            <h3>OUR PRODUCTS</h3>
+            <p style="margin-bottom: 0rem;">Zero waste. Zero chemicals.</p>
+          <div  class="row justify-content-center">
+           <div class="col-sm text-center" style="margin-top: 2rem;">
+             <img style=" max-width: 21rem; transform: rotate(90deg); border-radius: 50%;" src="/img/IMG_0788.JPG" alt="">
+           </div>
+           <div class="col-sm text-center" style="margin-top: 6rem;">
+            <p><span style="font-size: 19px;">Sandy Cheeks</span> - Ingredients: Grape seed oil bergamot and myrrh</p>
+            <p><span style="font-size: 19px;">Beard Bark</span> - Ingredients: Apricot oil atlas cedar and patchouli</p>
+           </div>
+          </div>
+    </div>         
+  </div>         
+ </div>         
+</section> --}}
+<section style="background: #f3a536; color: white; padding-top: 15rem; background: #f3a536; color: white; padding-top: 15rem; padding-bottom: 10rem; border-top-left-radius: 141%; margin-left: -9rem;">
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="col col-8 text-center" style="">
+        <h3>OUR PRODUCTS</h3>
+        <p style="margin-bottom: 2rem;">Zero waste. Zero chemicals.</p>
+        <div class="row justify-content-center">
+          <div class="col-9 text-center" style="margin-top: 2rem;">
+            <img style="min-width: 15rem;transform: rotate(90deg);border-radius: 50%;max-width: 80%;" src="/img/IMG_0788.JPG" alt="">
+          </div>
+          <div class="col text-center" style="margin-top: 6rem; min-width: 10rem;">
+            <p style="margin-bottom: 3rem;">
+              <span style="font-size: 19px;">Sandy Cheeks</span> - Ingredients: Grape seed oil bergamot and myrrh</p>
+            <p>
+              <span style="font-size: 19px;">Beard Bark</span> - Ingredients: Apricot oil atlas cedar and patchouli</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
