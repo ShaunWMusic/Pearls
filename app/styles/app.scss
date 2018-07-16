@@ -1,4 +1,5 @@
 @import "ember-side-menu";
+@import "ember-power-select";
 
 .hide {
   display: none;
@@ -433,3 +434,5 @@ ul {
 }
 
 @import "ember-bootstrap/bootstrap";
+
+@import "ember-power-select";

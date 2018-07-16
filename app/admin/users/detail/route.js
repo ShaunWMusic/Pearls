@@ -1,4 +1,19 @@
 import Route from '@ember/routing/route';
+import Ember from 'ember';
+import RSVP from 'rsvp';
 
 export default Route.extend({
+  currentUser: Ember.inject.service(),  
+ 
+  model() {
+    return RSVP.hash({
+      scent: 'Choose Scent',
+      // all: this.store.query('scent-schedule', {
+      //   filter: {
+      //     query: '122'
+      //   }
+      // })
+    });
+  }
 });
+

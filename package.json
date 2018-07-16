@@ -38,6 +38,7 @@
     "ember-font-awesome": "^4.0.0-rc.3",
     "ember-load-initializers": "^1.0.0",
     "ember-models-table": "^2.5.0",
+    "ember-power-select": "^2.0.4",
     "ember-resolver": "^4.0.0",
     "ember-side-menu": "0.0.15",
     "ember-simple-auth": "^1.4.2",
