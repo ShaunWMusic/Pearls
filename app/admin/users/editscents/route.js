@@ -6,24 +6,15 @@ export default Route.extend({
   currentUser: service('current-user'),
   model({ id }) {
     return RSVP.hash({
-      scentSchedule: this.store.query('scent-schedule', {
-        filter: {
-          query: id
-        }
-      }),
-      jan: '',
-      feb: '',
-      mar: '',
-      apr: '',
-      may: '',
-      jun: '',
-      jul: '',
-      aug: '',
-      sept: '',
-      oct: '',
-      nov: '',
-      dec: '',
+      // scentSchedule: this.store.query('scent-schedule', {
+      //   filter: {
+      //     query: id
+      //   }
+      // }),
+      scent: 'Choose Scent',
       userid: this.get('currentUser.user.id'),
       });
   }
 });
+
+
