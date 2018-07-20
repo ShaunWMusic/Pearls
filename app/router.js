@@ -31,6 +31,7 @@ Router.map(function() {
   this.route('users', function() {});
   this.route('guidelines');
   this.route('privacy-policy');
+  this.route('checkout');
 });
 
 export default Router;

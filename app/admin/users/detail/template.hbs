@@ -17,28 +17,7 @@
   {{/power-select}} 
   <button type="submit" class="yellowbutton" style="max-width: 10rem; margin: auto; margin-top: 2rem;">Submit</button>
 </form>
-<h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Pay Here</h3>
-<script async src="https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"></script>
-<div data-ap-widget-type="expressPaymentButton" data-ap-signature="HGnCd2MG3GaJkZJVs07GwPgWlsr1n0VTkbNhycBvTks%3D" data-ap-seller-id="A10YKIRL9CSYE7"
-  data-ap-access-key="AKIAJQC4BKIFSUL5VAOA" data-ap-lwa-client-id="amzn1.application-oa2-client.a627826460b74eaeb165531330ea7fa5"
-  data-ap-return-url="https://www.pearlsbeardoil.com/thanks" data-ap-cancel-return-url="https://www.pearlsbeardoil.com" data-ap-currency-code="USD"
-  data-ap-amount="13.99" data-ap-note="This subscription include one half ounce bottle of beard oil" data-ap-shipping-address-required="true"
-  data-ap-payment-action="AuthorizeAndCapture">
-</div>
 
-
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="XR6YKTYMJQB4C">
-<input style="border: none; height: 3rem; width: 9rem; margin: auto; margin-top: 0.5rem; padding-left: 0rem;" type="image" src="/img/subscribe.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="/img/subscribe.png" width="1" height="1">
-</form>
-<div style="margin-top: 2rem;">
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=R75E24W9ASKW2">
-<img style="margin: auto; height: 3rem; width: 9rem;" src="/img/unsubscribe.png" BORDER="0">
-</a>
-</div>
 {{!-- <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Announcements</h3>
 <p style="margin-top: 4rem;">{{#link-to "video-announcement" class="yellowbutton white"}}Video Announcement {{fa-icon "video-camera"}}{{/link-to}}</p> --}}
 {{#if currentUser.user.admin}}

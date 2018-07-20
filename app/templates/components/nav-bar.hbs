@@ -11,7 +11,7 @@
         <li class="col text-center">{{#side-menu-link-to "products"}}PRODUCTS{{/side-menu-link-to}}</li>
         {{#if session.isAuthenticated}}
         <li class="col text-center">{{#side-menu-link-to "admin.users.detail" currentUser.user.id}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
-        <li class="col text-center">{{#side-menu-link-to "admin.users.scents" currentUser.user.id}}{{fa-icon "shopping-cart"}}{{/side-menu-link-to}}</li>
+        <li class="col text-center">{{#side-menu-link-to "checkout"}}{{fa-icon "shopping-cart"}}{{/side-menu-link-to}}</li>
         <li class="col text-center"><a href="#" onclick={{action "logout"}}>Logout</a></li>
         {{else}}
         <li class="col text-center">{{#side-menu-link-to "login"}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
