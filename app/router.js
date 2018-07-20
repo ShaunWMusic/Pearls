@@ -30,6 +30,7 @@ Router.map(function() {
 
   this.route('users', function() {});
   this.route('guidelines');
+  this.route('privacy-policy');
 });
 
 export default Router;
