@@ -7,5 +7,6 @@ export default DS.Model.extend({
   passwordConfirmation: DS.attr(),
   admin: DS.attr('boolean', {defaultValue: false}),
   barbershop: DS.attr('boolean', {defaultValue: false}),
-  customer: DS.attr('boolean', {defaultValue: true})
+  customer: DS.attr('boolean', {defaultValue: true}),
+  plan_id: DS.attr()
 });

@@ -1,5 +1,8 @@
-{{login-form user=model onsubmit=(action "login") errors=errors}}
-
-<div class="text-center">
- {{#link-to 'register'}}Create Account{{/link-to}}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-xs-12">
+        <img src="/img/logo.jpg" style="max-width: 22rem;" alt="Pearls Beard Oil Logo">
+        </div>
+    </div>
 </div>
+{{login-form user=model onsubmit=(action "login") errors=errors}}

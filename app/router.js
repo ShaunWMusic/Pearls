@@ -22,6 +22,8 @@ Router.map(function() {
     });
     this.route('customers');
     this.route('customer_inventories');
+    this.route('stats');
+    this.route('oilinventory');
   });
   this.route('register');
   this.route('login');
@@ -31,7 +33,8 @@ Router.map(function() {
   this.route('users', function() {});
   this.route('guidelines');
   this.route('privacy-policy');
-  this.route('checkout');
+  this.route('checkout', { path: '/checkout/:id' });
+  this.route('checkout-complete');
 });
 
 export default Router;

@@ -1,0 +1,55 @@
+{{#if session.isAuthenticated}} 
+{{#link-to 'admin.contacts' class="text-center tab"}}Barbers{{/link-to}} 
+{{#link-to 'admin.barbershop_inventories' class="text-center tab"}}Barbershops{{/link-to}} 
+{{#link-to 'admin.customer_inventories' class="text-center tab"}}Customers{{/link-to}}
+{{#link-to 'admin.oilinventory' class="text-center tab tab-active"}}Oil Inventory{{/link-to}}
+<div class="hidemobile">
+    {{models-table data=model columns=columns columnComponents=(hash deleteRow=(component "delete-row-comp"
+    onClick=(action "deleteRecord")) editRow=(component "models-table/cell-edit-toggle" saveRowAction=(action "onSaveRow")
+    cancelRowAction=(action "onCancelRow")) ) showComponentFooter=showComponentFooter showColumnsDropdown=showColumnsDropdown
+    useFilteringByColumns=useFilteringByColumns showGlobalFilter=showGlobalFilter doFilteringByHiddenColumns=doFilteringByHiddenColumns
+    useNumericPagination=useNumericPagination filteringIgnoreCase=filteringIgnoreCase multipleColumnsSorting=multipleColumnsSorting
+    showPageSize=showPageSize }}
+</div>
+<table class="hidemobile" style="width:100%">
+    <form onsubmit={{action "newBottles"}}>
+        <tr>
+            <td>{{input class="" type="text" value=model.beardbark placeholder="beardbark"}}</td>
+            <td>{{input class="" type="text" value=model.sandycheeks placeholder="sandycheeks"}}</td>
+            <td>{{input class="" type="text" value=model.totalbottles placeholder="total oil bottles"}}</td>
+            <td class="">
+                <div>
+                    <button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 7rem;">Add Bottles</button>
+                </div>
+            </td>
+        </tr>
+    </form>
+</table>
+
+<!-- ///////////////////////////////////////// -->
+<!-- /////////////MOBILE VIEW//////////////// -->
+<!-- ///////////////////////////////////////// -->
+
+<form id="contactform" class="hidedesktop" style=" justify-content: center; text-align: center;" onsubmit={{action
+    "newBottles"}}>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.beardbark placeholder="beardbark"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.sandycheeks placeholder="sandycheeks"}}</div>
+    <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.totalbottles placeholder="total oil bottles"}}</div>
+    <button type="submit" class="btn btn-default yellowbutton" style="border-radius: 0rem;margin-top: 0rem; max-width: 8rem; min-width: 11rem; margin: auto;">Add Bottles</button>
+</form>
+<div class="hidedesktop" style="text-align: left; margin-top: 2rem; border-top: 1px solid black; padding-top: 2rem;">
+    <h3 style="padding-bottom: 2rem;">Oil Bottle Total</h3>
+    {{#each model.oilinventory as |view|}}
+    <p style="border-bottom: 1px solid black; max-width: 15rem;">
+        <strong>Sandycheeks:</strong> {{view.sandycheeks}}
+        <strong>Beardbark:</strong> {{view.beardbark}}
+        <strong>Total Bottles:</strong> {{view.totalbottles}}</p>
+    {{/each}}
+</div>
+{{else}}
+<div class="text-center">
+    <h1> Sorry, you do not have admin access. Please login.</h1>
+    {{#link-to 'login'}}Login{{/link-to}}
+</div>
+
+{{/if}}

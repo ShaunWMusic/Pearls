@@ -10,7 +10,7 @@
 
 {{!-- <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Your Scent</h3> --}}
 
-<h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 1rem; margin-top: 4rem;">Current Scent</h3>
+{{!-- <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 1rem; margin-top: 4rem;">Current Scent</h3>
 {{#each model.scentSchedule as |current|}}
 {{#if (eq current.userId currentUser.user.id)}}
 <p>{{current.scent}}</p>
@@ -19,7 +19,7 @@
 {{/each}}
 
 {{#link-to 'admin.users.editscents' currentUser.user.id class="yellowbutton"}}Select New Scent{{/link-to}}
-
+--}}
 {{!-- <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Announcements</h3>
 <p style="margin-top: 4rem;">{{#link-to "video-announcement" class="yellowbutton white"}}Video Announcement {{fa-icon "video-camera"}}{{/link-to}}</p> --}}
 {{#if currentUser.user.admin}}

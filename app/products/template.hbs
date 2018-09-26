@@ -9,7 +9,7 @@
             naturally. Browse through our various products that are<br />
             available in two different scents for you to enjoy.
           </p>
-          <h3>Get Growin Today</h3>
+          <h3>Customize Your Order</h3>
           <div class="text-center" style="border: 1px solid #f3a536; width: 8rem; margin: auto;"></div>
           <div class="row justify-content-center"  style="margin-top: 4rem;">
             <div class="col-sm">
@@ -17,14 +17,32 @@
             </div>
             <div class="col-sm align-self-center">
               <p style="margin-top: 0rem; margin-bottom: 0rem">$13.99 / month</p>
-              <p style="margin-top: 0rem; margin-bottom: 0rem">Test 1 of 2 Scents:<br /> <strong>Sandy Cheeks</strong> or <strong>Beard Bark</strong></p>
-              <p style="margin-top: 0rem; margin-bottom: 0rem">15ml / 0.5oz</p>
-              <p style="margin-top: 0rem;">free shipping, cancel anytime</p>
-          {{#if session.isAuthenticated}}
+              <p style="margin-top: 0rem; margin-bottom: 0rem">free shipping, cancel anytime</p>
+              {{!-- <p style="margin-top: 0rem; margin-bottom: 0rem">15ml / 0.5oz</p> --}}
+              {{!-- <p style="margin-top: 0rem;">free shipping, cancel anytime</p> --}}
+          {{!-- {{#if session.isAuthenticated}}
             {{#link-to 'admin.users.editscents' currentUser.user.id}}<button class="yellowbutton">Schedule Scents</button>{{/link-to}}
             {{else}}
             {{#link-to 'register'}}<button class="yellowbutton">Be a Product Tester</button>{{/link-to}}
-          {{/if}}
+          {{/if}} --}}
+              <form onsubmit={{action "processStripeToken"}}>
+                {{!-- {{input value=model.email placeholder="Email"}}<br> --}}
+                {{#power-select 
+                placeholder="select beard oil"
+                options=products selected=model.product onchange=(action (mut model.product)) as |product|}}
+                {{product}}
+                {{/power-select}}
+                
+                  {{stripe-checkout
+                  image="/img/beard-logo-1.jpg"
+                  name="Pearl's Beard Oil"
+                  description="Monthly Subscription"
+                  amount=1399
+                  label="Subscribe"
+                  onToken=(action "processStripeToken")
+                  class="yellowbutton"
+                  }}
+              </form>
             </div>
           </div>
         </div>
