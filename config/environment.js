@@ -3,7 +3,9 @@
 
 module.exports = function(environment) {
   let ENV = {
-
+    stripe: {
+      key: 'pk_test_1x2UX3WNhEiAfh4kDH5bSd9X',
+    },
     modulePrefix: 'pearls-beard-oil',
     environment,
     rootURL: '/',
@@ -36,6 +38,7 @@ module.exports = function(environment) {
       refreshAccessTokens: false
     }
   };
+  
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

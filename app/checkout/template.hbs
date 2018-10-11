@@ -1,5 +1,5 @@
 <div style="text-align: center; max-width: 20rem; margin: 2rem auto;">
-<h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Pay Here</h3>
+{{!-- <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Pay Here</h3>
 <p>One-time payment</p>
 <script async src="https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"></script>
 <div data-ap-widget-type="expressPaymentButton" data-ap-signature="HGnCd2MG3GaJkZJVs07GwPgWlsr1n0VTkbNhycBvTks%3D" data-ap-seller-id="A10YKIRL9CSYE7"
@@ -7,11 +7,11 @@
     data-ap-return-url="https://www.pearlsbeardoil.com/thanks" data-ap-cancel-return-url="https://www.pearlsbeardoil.com" data-ap-currency-code="USD"
     data-ap-amount="13.99" data-ap-note="This subscription include one half ounce bottle of beard oil" data-ap-shipping-address-required="true"
     data-ap-payment-action="AuthorizeAndCapture">
-</div>
+</div> --}}
 
 
 
-<p style="margin-top: 4rem; margin-bottom: 0rem;">Monthly Subscription</p>
+{{!-- <p style="margin-top: 4rem; margin-bottom: 0rem;">Monthly Subscription</p>
 <p style="margin-top: 0rem; margin-bottom: 0rem;">Via Paypal</p>
 <form style="margin-top: 1rem;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
     <input type="hidden" name="cmd" value="_s-xclick">
@@ -24,5 +24,69 @@
     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=R75E24W9ASKW2">
         <img style="margin: auto; margin-top: 4rem;" src="https://www.paypalobjects.com/en_US/i/btn/btn_unsubscribe_LG.gif" BORDER="0">
     </a>
+</div> --}}
+<h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">ORDER SUMMARY</h3>
 </div>
+<div class="container">
+
+    <div class="row">
+    <div class="col" style="border-right: 1px solid #f3a536;">
+        <h3>Your Order</h3>
+        <img src="/img/IMG_0584.png" style="max-width: 5rem;" alt="">
+        <p style="margin-bottom: 0rem; margin-top: 1rem;">Ships in 3-5 business days</p>
+        <span style="display: block; border-bottom: 1px solid #f3a536; max-width: 11.6rem; margin-bottom: 0.5rem;"></span>
+        <div class="row">
+            <div class="col">
+                <p>Shipping</p>
+                <p>Subscription</p>
+                <p>Cancel</p>
+                <p><strong>Total</strong></p>
+            </div>
+            <div class="col">
+                <p>Free</p>
+                <p>$13.99/month</p>
+                <p>Anytime</p>
+                <p><strong>$13.99/month</strong></p>
+            </div>
+        </div>
+       
+    </div>
+    <div class="col gutters">
+    <h3>1. Account Information</h3>
+
+         <form onsubmit={{action "saveForm"}} class="row gutters">
+                {{#each errors as |error|}}
+                <p style="color: red;">{{error.detail}}</p>
+                {{/each}}
+            {{input value=model.email type="text" placeholder="Email"}}<br>
+            {{input value=model.password type="password" placeholder="Password"}}<br>
+            {{input value=model.passwordConfirmation type="password" placeholder="Confirm Password"}}<br>
+            {{input value=model.username type="text" placeholder="Username"}}<br>
+            {{input class="hide" value=model.plan_id type="text" placeholder="Plan Id"}}<br>
+        
+            {{!-- <h3>2. Shipping Information</h3> --}}
+            {{!-- {{input value=model.address type="text" placeholder="Address" class="col-12"}} --}}
+            <div class="row no-gutters">
+            {{!-- {{input value=model.aptnumber type="text"  placeholder="Apt/ Suite #" class="col-6 gutters"}} --}}
+            {{!-- {{input value=model.city type="text" placeholder="City" class="col-6 gutters"}} --}}
+            </div>
+            <div class="row no-gutters">
+            {{!-- {{input value=model.country type="text" placeholder="Country" class="col-6 gutters"}} --}}
+            {{!-- {{input value=model.state type="text" placeholder="State" class="col-6 gutters"}}<br> --}}
+            </div>
+            {{!-- {{input value=model.zip type="text" placeholder="Zip" class="col-6 gutters"}}<br> --}}
+            
+            <button type="submit" class="yellowbutton" style="">Create Account</button>
+        </form>
+     
+    </div>
+    </div>
 </div>
+
+        {{!-- onClosed=(action "closed") --}}
+
+<div style="margin-top: 2rem; max-width: 7rem; margin: auto;">
+   
+</div>
+
+

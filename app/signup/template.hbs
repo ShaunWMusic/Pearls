@@ -1,78 +1,30 @@
-<section class="bkimg">
-<div class="container" style="padding-bottom: 26.5rem;">
-  <div class="row mb4 mt4" style="position: relative;">
-    <div class=" text-center">
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  #mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+  }
 
-<!-- //////////////////////////////////// -->
-<!--///////////// Mobile ///////////////  -->
-<!-- //////////////////////////////////// -->
-      <div class="hidden-md hidden-lg mbmargins">
-        <div id="mbcf4a">
-          <img src="/img/beard-logo-1.jpg"  alt="">
-          <img src="/img/beard-logo-2.jpg"  alt="">
-          <img src="/img/beard-logo-3.jpg"  alt="">
-          <img src="/img/beard-logo-4.jpg"  alt="">
-          <img src="/img/beard-logo-5.jpg"  alt="">
-          <img src="/img/beard-logo-6.jpg"  alt="">
-          <img src="/img/beard-logo-7.jpg"  alt="">
-          <img src="/img/beard-logo-9.jpg"  alt="">
-          <img src="/img/beard-logo-10.jpg"  alt="">
-          <img src="/img/beard-logo-11.jpg"  alt="">
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-6 text-center hidden-md hidden-lg mb-orange-card">
-
-        <h2 style="color: white; margin-top: 5rem;">FEED YOUR BEARD!</h2>
-        <div class="col-xs-12 col-md-8 text-center col-md-offset-2" style="margin-top: 0rem; margin-bottom: 5rem;">
-          <p style="color: white;"></p>
-          {{#simple-form onsubmit=(action "saveForm") as |formValues| }}
-            {{input value=formValues.email placeholder="Email Address"}}
-            <!-- {{input value=formValues.password placeholder="Password"}} -->
-
-            <button>GET GROWIN</button>
-          {{/simple-form}}
-          <!-- <p class="text-center" style="color: white; margin-top: 2rem; margin-bottom: 2rem;"><strong>100</strong> spots left</p> -->
-        </div>
-
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+  <form action="https://pearlsbeardoil.us18.list-manage.com/subscribe/post?u=c82bd123411ea60b3737bbe2d&amp;id=babb50b756"
+    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+    novalidate>
+    <div id="mc_embed_signup_scroll">
+      <label for="mce-EMAIL">Subscribe to our mailing list</label>
+      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c82bd123411ea60b3737bbe2d_babb50b756"
+          tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
-<!-- //////////////////////////////////// -->
-<!-- /////////// Desktop ///////////////  -->
-<!-- //////////////////////////////////// -->
-      <div class="wrapper hidden-xs hidden-sm">
-        <div class="col-xs-12 col-md-6 hidden-xs hidden-sm">
-          <div id="cf4a">
-            <img src="/img/beard-logo-1.jpg"  alt="">
-            <img src="/img/beard-logo-2.jpg"  alt="">
-            <img src="/img/beard-logo-3.jpg"  alt="">
-            <img src="/img/beard-logo-4.jpg"  alt="">
-            <img src="/img/beard-logo-5.jpg"  alt="">
-            <img src="/img/beard-logo-6.jpg"  alt="">
-            <img src="/img/beard-logo-7.jpg"  alt="">
-            <!-- <img src="/img/beard-logo-8.jpg"  alt=""> -->
-            <img src="/img/beard-logo-9.jpg"  alt="">
-            <img src="/img/beard-logo-10.jpg"  alt="">
-            <img src="/img/beard-logo-11.jpg"  alt="">
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6 orange-card text-center hidden-xs hidden-sm">
-          <!-- <div class=""> -->
-          <h2 style="color: white; margin-top: 10rem;">FEED YOUR BEARD!</h2>
-          <div class="col-xs-12 col-md-8 text-center col-md-offset-2" style="margin-top: 0rem; margin-bottom: 0rem;">
-            <p style="color: white;"></p>
-            {{#simple-form onsubmit=(action "saveForm") as |formValues| }}
-              {{input value=formValues.email placeholder="Email Address"}}
-              <!-- {{input value=formValues.password placeholder="Password"}} -->
-
-              <button>GET GROWIN</button>
-            {{/simple-form}}
-            <!-- <p class="text-center" style="color: white; margin-top: 2rem;"><strong>100</strong> spots left</p> -->
-          </div>
-        <!-- </div> -->
-      </div>
-    </div>
-    </div>
-  </div>
+  </form>
 </div>
-</section>
+
+<!--End mc_embed_signup-->
 
 {{outlet}}

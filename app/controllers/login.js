@@ -10,8 +10,8 @@ export default Controller.extend({
         this.get('session').authenticate('authenticator:jwt', {
           identification: attrs.email,
           password: attrs.password
-        }).then((currentUser) => {
-            this.transitionToRoute('admin.users.detail', currentUser);
+        }).then(() => {
+            this.transitionToRoute('index');
         }).catch((e) => {
           this.set('errors', e.errors);
         });

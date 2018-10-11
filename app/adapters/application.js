@@ -1,6 +1,7 @@
 import DS from 'ember-data';
 import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
+// import ENV from '../config/environment';
 
 export default DS.JSONAPIAdapter.extend({
   session: service('session'),
