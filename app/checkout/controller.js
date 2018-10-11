@@ -7,20 +7,7 @@ currentUser: service('current-user'),
 session: service('session'),
 ajax: service('ajax'),
 
-reset() {
-  this.setProperties({
-    password: '',
-    // address: '',
-    // aptnumber: '',
-    // city: '',
-    // country: '',
-    // state: '',
-    // zip: '',
-    username: '',
-    email: '',
-    plan_id: ''
-  });
-},
+
 
 actions: {
 

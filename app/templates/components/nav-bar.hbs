@@ -37,7 +37,6 @@
     <li class="col-12 text-center">{{#side-menu-link-to "index"}}HOME{{/side-menu-link-to}}</li>
     <li class="col-12 text-center">{{#side-menu-link-to "products"}}PRODUCTS{{/side-menu-link-to}}</li>
     {{#if session.isAuthenticated}}
-    <li class="col text-center">{{#side-menu-link-to "checkout" id}}{{fa-icon "shopping-cart"}}{{/side-menu-link-to}}</li>
     <li class="col-12 text-center"><a href="#" onclick={{action "logout"}}>Logout</a></li>
       {{else}}
       <li class="col-12 text-center">{{#side-menu-link-to "login"}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>

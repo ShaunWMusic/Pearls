@@ -12,8 +12,6 @@ export default DS.Model.extend({
   token: DS.attr(),
   source: DS.attr(),
   card: DS.attr(),
-  // shipping: Ember.computed('address', 'aptnumber', 'city', 'country', 'state', 'zip', function () {
-  //   return `${this.address} ${this.aptnumber} ${this.city}, ${this.state} ${this.zip} ${this.country}`;
-  // }),
+  username: DS.attr()
 });
 
