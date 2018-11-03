@@ -43,7 +43,6 @@ actions: {
           subscriber.set('id', '');
           subscriber.save()
           .then(() => {
-            debugger;
             let createUser = this.store.createRecord('user', this.model);
             createUser.save()
               .then(() => {
@@ -53,7 +52,7 @@ actions: {
           });
        });
     });
-    },
+    }
 
 }
 });
