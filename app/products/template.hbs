@@ -11,13 +11,18 @@
           </p>
           <h3>Customize Your Order</h3>
           <div class="text-center" style="border: 1px solid #f3a536; width: 8rem; margin: auto;"></div>
+            {{#each errors as |error|}}
+            <p style="color: red; margin-top: 2rem;">{{error.meta.exception}}</p>
+            {{/each}}
           <div class="row justify-content-center"  style="margin-top: 4rem;">
             <div class="col-sm">
               <img style="max-width: 5rem;" src="./img/IMG_0584.png" alt="">
             </div>
             <div class="col-sm align-self-center">
-              <p style="margin-top: 0rem; margin-bottom: 0rem">$13.99 / month</p>
-              <p style="margin-top: 0rem; margin-bottom: 0rem">free shipping, cancel anytime</p>
+              <p style="margin-top: 0rem; margin-bottom: 0rem; font-weight: bold; text-transform: uppercase;">Black Friday Sale</p>
+              <p style="margin-top: 0rem; margin-bottom: 0rem;">$7.50 / month</p>
+              <p style="margin-top: 0rem; margin-bottom: 0rem; text-decoration: line-through;">$13.99 / month</p>
+              <p style="margin-top: 0rem; margin-bottom: 0rem; text-transform: uppercase;">free shipping, cancel anytime</p>
               {{!-- <p style="margin-top: 0rem; margin-bottom: 0rem">15ml / 0.5oz</p> --}}
               {{!-- <p style="margin-top: 0rem;">free shipping, cancel anytime</p> --}}
           {{!-- {{#if session.isAuthenticated}}
@@ -28,8 +33,11 @@
               <form onsubmit={{action "processStripeToken"}}>
                 {{!-- {{input value=model.email placeholder="Email"}}<br> --}}
                 {{#power-select 
-                placeholder="select beard oil"
-                options=products selected=model.product onchange=(action (mut model.product)) as |product|}}
+                placeholder="Choose Your Scented Beard Oil"
+                options=products 
+                searchEnabled=false
+                selected=model.product 
+                onchange=(action (mut model.product)) as |product|}}
                 {{product}}
                 {{/power-select}}
                 
@@ -37,7 +45,7 @@
                   image="/img/beard-logo-1.jpg"
                   name="Pearl's Beard Oil"
                   description="Monthly Subscription"
-                  amount=1399
+                  amount=750
                   label="Subscribe"
                   shippingAddress=true
                   billingAddress=true
@@ -48,6 +56,7 @@
 
               </form>
             </div>
+          
           </div>
         </div>
     </div>

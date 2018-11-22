@@ -1,0 +1,88 @@
+<div id="wrapper-launch">
+    <div id="contentHome" class="" style="background: #0099d8;">
+        <section id="header">
+
+            <div>{{#link-to "login"}}<img class="srilogo" style="max-width: 16rem;" src="/assets/img/rnh/sri_logo.svg">{{/link-to}}
+            </div>
+        </section>
+
+
+        <section id="launch" style="  background-image: url('../assets/img/launch/block_head_blue.jpg');">
+
+            <div class="container fadein" style="min-height:70vh;">
+
+
+                <div class="row " style="">
+
+
+
+
+
+                    <!-- //////////////////////////////////////// -->
+                    <!-- This is for when RNH is Ready for Launch -->
+                    <!-- //////////////////////////////////////// -->
+                    <div class=" col-xs-12  col-lg-12 " style=" width:80%; height:auto; margin:auto;">
+
+                        <section id="profile" style="padding: 5px 0;">
+
+                            <div id="thanks" style="color: white;">
+                                <hr>
+                                <p style="font-size:20px; font-weight:400; color: white;">
+
+                                    Your identity has now been verified.<br><br> Please 
+                                    login with your new password.
+                                </p>
+                                <br>
+                                <br>
+                                {{!-- <h3 class="Reg_btn sriloginbtn" style="color: white; text-align: center; float: none; margin: auto;">{{#link-to
+                                    'login'}}Login{{/link-to}}</h3> --}}
+                                {{#simple-form class="card__form" onsubmit=(action "checkForm") as | formValues |}}
+                                {{input class="form__input" type="text"
+                                required=true value=formValues.email placeholder="E-Mail"}}<br /> {{input
+                                class="form__input" type="password" required=true
+                                value=formValues.password placeholder="Password"}} 
+                                {{#each errors as |error|}}
+                                <p style="color: red;">{{error.detail}}</p>
+                                {{/each}}
+                                <!-- <a href="/firstlook/leaderboard/elite-ae15m"> -->
+                                <div class="button-box ">
+                                    <button type="submit" class="Reg_btn sriloginbtn" style="border-radius: 0rem; width: 280px; background-color: #003057;">Login</button>
+                                </div>
+                                <!-- </a> -->
+                                {{/simple-form}}
+                                {{#link-to "forgotpassword"}}<p style="margin-top: 1rem; color: white;">Forgot Password?</p>{{/link-to}}
+                                {{#link-to "salesforce"}}<div class="button-box ">
+                                    <button type="button" class="Reg_btn sriloginbtn" style="border-radius: 0rem; width: 280px; background-color: #003057;">Create
+                                        Account</button>
+                                </div>
+                                {{/link-to}}
+                            </div>
+                            <div style="margin-top:2rem;"></div>
+
+                        </section>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section id="homepageCornerLogo">
+            <img src="/assets/img/Spectrum_Reach_Rev_RGB.svg">
+        </section>
+
+        <section id="stickyFooter">
+            <div class="copyright">
+                <p style="">Copyright 2018 • Spectrum Reach • All Rights Reserved</p>
+            </div>
+            <div class="toTop"><span class="" {{action "scrollToTop"}}><span style="color:#fff;">Top</span> <img src="/assets/img/leaderboard/return_top.svg" /></span></div>
+
+        </section>
+
+    </div>
+    <!--  END WRAPPER  -->
+</div>

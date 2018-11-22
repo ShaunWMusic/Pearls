@@ -2,7 +2,16 @@
 <div style="text-align: center; max-width: 20rem; margin: 2rem auto;">
   <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem;">Profile Details</h3>
   <p style="text-align: left;">Email: {{currentUser.user.email}}</p>
-<p style="text-align: left;">Username: {{currentUser.user.username}}</p>
+<p style="text-align: left; margin-bottom: 1rem;">Username: {{currentUser.user.username}}</p>
+{{#each model.customer as |user|}}
+<p style="text-align: left; margin-bottom: 1rem;">Paid via stripe on {{moment-format user.createdAt 'MMMM Do YYYY'}}— {{user.source}}</p>
+{{/each}}
+{{#link-to 'admin.users.updatepassword' currentUser.user.id class="yellowbutton block"}}Update Password{{/link-to}}
+<br>
+<br>
+<br>
+<br>
+<div onclick={{action "unsubscribe"}} style="cursor: pointer;" class="yellowbutton block">Unsubscribe</div>
 <!-- <p>{{currentUser.user.admin}}</p> -->
 <!-- <p>{{currentUser.user.barbershop}}</p> -->
 <!-- <p>{{currentUser.user.customer}}</p> -->
@@ -22,10 +31,10 @@
 --}}
 {{!-- <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Announcements</h3>
 <p style="margin-top: 4rem;">{{#link-to "video-announcement" class="yellowbutton white"}}Video Announcement {{fa-icon "video-camera"}}{{/link-to}}</p> --}}
-{{#if currentUser.user.admin}}
+{{!-- {{#if currentUser.user.admin}}
 <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem; margin-top: 4rem;">Admin Links</h3>
 <div style="margin-top: 2rem;">
 <div class="col-sm" style="">{{#link-to "admin.contacts" class="yellowbutton white"}}Inventory{{/link-to}}</div>
 </div>
-{{/if}}
+{{/if}} --}}
 </div>

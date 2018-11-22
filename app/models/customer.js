@@ -12,6 +12,7 @@ export default DS.Model.extend({
   token: DS.attr(),
   source: DS.attr(),
   card: DS.attr(),
-  username: DS.attr()
+  username: DS.attr(),
+  createdAt: DS.attr()
 });
 

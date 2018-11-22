@@ -1,16 +1,16 @@
 <!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
+<!-- <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css"> -->
+<!-- <style type="text/css">
   #mc_embed_signup {
     background: #fff;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
-  }
+  } 
 
   /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
+ </style> -->
+{{!-- <div id="mc_embed_signup">
   <form action="https://pearlsbeardoil.us18.list-manage.com/subscribe/post?u=c82bd123411ea60b3737bbe2d&amp;id=babb50b756"
     method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
     novalidate>
@@ -23,8 +23,27 @@
       <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
   </form>
-</div>
+</div> --}}
 
 <!--End mc_embed_signup-->
+<div class="container">
+  {{!-- <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-xs-12">
+      <img src="/img/logo.jpg" style="max-width: 22rem;" alt="Pearls Beard Oil Logo">
+    </div>
+  </div> --}}
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-xs-12">
+      {{#simple-form onsubmit=(action "updateForm") as |formValues| }}
+      {{#each model as |user|}}
+      {{input type="text" class="mb1" value=user.email placeholder="email"}}
+      {{/each}}
+      {{input type="password" class="mb1" value=formValues.password placeholder="Password"}}
+      {{input type="password" class="mb1" value=formValues.passwordConfirmation placeholder="Confirm Password"}}
+      <button class="yellowbutton">Create Password</button>
+      {{/simple-form}}
+    </div>
+  </div>
+</div>
 
 {{outlet}}

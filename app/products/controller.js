@@ -51,6 +51,8 @@ actions: {
               });
           });
        });
+    }).catch((e) => {
+      this.set('errors', e.errors);
     });
     }
 

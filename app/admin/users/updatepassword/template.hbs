@@ -1,0 +1,32 @@
+<div style="text-align: center; max-width: 20rem; margin: 2rem auto;">
+    <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem;">Update Password</h3>
+<!-- <h3 style="color: white; text-align: center; margin: auto; float: none;">EDIT PROFILE</h3> -->
+<div class="detail">
+    <div class="detail-card">
+        <!-- <div class="detail-card__title">Edit Details</div> -->
+        {{#simple-form class="card__form" startingValues=model onsubmit=(action "updateForm") as | formValues |}}
+        {{input class="form_input mb1 hide" type="text" value=formValues.email}}
+        {{input class="form__input" type="password" required=true id="password"
+        value=formValues.password placeholder="New Password"}}<br />
+        <!-- An element to toggle between password visibility -->
+        <div>
+            <input type="checkbox" onclick="myFunction()">
+            <span>Show Password</span>
+        </div>
+
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>
+        <button type="submit" class="btn" style="background: #002039;">Update Password</button><br />
+        {{#link-to "admin.users.detail" currentUser.user.id class="btn yellowbutton"}}Back{{/link-to}}
+        {{/simple-form}}
+    </div>
+</div>
+</div>

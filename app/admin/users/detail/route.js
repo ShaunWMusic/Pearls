@@ -5,7 +5,7 @@ import RSVP from 'rsvp';
 export default Route.extend({
   currentUser: Ember.inject.service(),  
  
-  model(id) {
+  model({ id }) {
     return RSVP.hash({
       scent: 'Choose Scent',
       // all: this.store.query('scent-schedule', {
@@ -13,7 +13,11 @@ export default Route.extend({
       //     query: '122'
       //   }
       // })
-      scentSchedule: this.store.findAll('scent-schedule')
+      customer: this.store.query('customer', {
+        filter: {
+          userId: id
+        }
+      }),
     });
   }
 });

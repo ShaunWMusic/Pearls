@@ -8,7 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('thanks');
-  this.route('signup');
+  this.route('signup', { path: '/new-account/:id' });
   this.route('admin', function() {
     this.route('contacts');
     this.route('contact-details', { path: '/contact-details/:id' });
@@ -19,6 +19,9 @@ Router.map(function() {
       this.route('detail', { path: '/detail/:id '});
       this.route('scents', { path: '/scents/:id' });
       this.route('editscents', { path: '/editscents/:id' });
+      this.route('updatepassword', { path: '/updatepassword/:id/edit'});
+      this.route('passwordreset-success');
+      this.route('unsubscribe-success');
     });
     this.route('customers');
     this.route('customer_inventories');
@@ -35,6 +38,10 @@ Router.map(function() {
   this.route('privacy-policy');
   this.route('checkout', { path: '/checkout/:id' });
   this.route('checkout-complete');
+  this.route('forgotpassword', { path: '/updatepassword' });
+  this.route('passwordresetconfirmation');
+  this.route('resetpassword', { path: '/forgot-password/:id'});
+  this.route('faq');
 });
 
 export default Router;

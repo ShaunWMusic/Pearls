@@ -1,11 +1,10 @@
 /* eslint-env node */
 'use strict';
-
+console.log(process.env.STRIPE_KEY);
 module.exports = function(environment) {
   let ENV = {
-    stripe: {
-      key: 'pk_test_1x2UX3WNhEiAfh4kDH5bSd9X',
-    },
+    
+    
     modulePrefix: 'pearls-beard-oil',
     environment,
     rootURL: '/',
@@ -25,12 +24,15 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+    stripe: {
+      key: process.env.STRIPE_KEY,
+    },
 
     'ember-simple-auth-token': {
       identificationField: 'email',
       passwordField: 'password',
-      serverTokenEndpoint: 'http://localhost:3000/session',
-      // serverTokenEndpoint: 'https://thawing-tor-75666.herokuapp.com/session',
+      // serverTokenEndpoint: 'http://localhost:3000/session',
+      serverTokenEndpoint: 'https://thawing-tor-75666.herokuapp.com/session',
       headers: {
         'Content-Type': 'application/vnd.api+json',
         'Accept': 'application/vnd.api+json'

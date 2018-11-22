@@ -2,10 +2,15 @@
 <div class="container" style="padding-bottom: 26.5rem;">
   <div class="row mb4 mt4" style="position: relative;">
       <div class="col text-center ">
-        <h2 style="margin-top: 5rem;">Welcome to the Club!</h2>
+        <h2 style="margin-top: 5rem;">🎊Welcome to the Club!👏</h2>
         <div style="margin-top: 0rem; margin-bottom: 5rem; margin-right: auto; margin-left: auto;">
-          <p style="">Congrats on taking the first step towards a stronger, cleaner, healthier beard! Login to choose your scents for each month.</p>
+          <p style="">Congrats on taking the first step towards a stronger, cleaner, healthier beard!</p>
+          {{#if session.isAuthenticated}}
+          <p style="margin-top: 2rem;">{{#link-to "admin.users.detail" currentUser.user.id class="yellowbutton white"}}View Profile{{/link-to}}</p>
+          {{else}}
           <p style="margin-top: 2rem;"><a href="/login" class="yellowbutton white ">Login</a></p>
+          {{/if}}
+
         </div>
       </div>
     </div>

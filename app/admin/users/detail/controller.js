@@ -24,6 +24,17 @@ export default Controller.extend({
         .then(() => {
           this.transitionToRoute('admin.users.detail');
         });
+    },
+
+    unsubscribe() {
+       this.store.query('customer', {
+        filter: {
+          unsubscribe: this.model.customer.content[0].__data.source
+        }
+      })
+      .then(() => {
+        this.transitionToRoute('admin.users.unsubscribe-success');
+      })
     }
   }
 });
