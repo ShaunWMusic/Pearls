@@ -1,6 +1,5 @@
 /* eslint-env node */
 'use strict';
-console.log(process.env.STRIPE_KEY);
 module.exports = function(environment) {
   let ENV = {
     
