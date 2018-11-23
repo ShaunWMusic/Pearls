@@ -42,6 +42,7 @@ Router.map(function() {
   this.route('passwordresetconfirmation');
   this.route('resetpassword', { path: '/forgot-password/:id'});
   this.route('faq');
+  this.route('about-us');
 });
 
 export default Router;

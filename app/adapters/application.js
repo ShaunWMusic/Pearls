@@ -7,7 +7,6 @@ export default DS.JSONAPIAdapter.extend({
   session: service('session'),
   // localhost
   // host: 'http://localhost:3000',
-  
   // Production API
   host: 'https://thawing-tor-75666.herokuapp.com',
 
