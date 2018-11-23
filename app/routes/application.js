@@ -9,6 +9,7 @@ export default Route.extend({
     this._super(...arguments);
     
     this.loadUser();
+    
   },
 
   init() {
