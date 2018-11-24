@@ -43,6 +43,7 @@
     <li class="col-12 text-center">{{#side-menu-link-to "announcements"}}{{fa-icon "bullhorn"}}{{/side-menu-link-to}}</li>
     <li class="col-12 text-center"><a href="/faq">{{fa-icon "question"}}</a></li>
     {{#if session.isAuthenticated}}
+    <li class="col-12 text-center">{{#side-menu-link-to "admin.users.detail" currentUser.user.id}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
     <li class="col-12 text-center"><a href="#" onclick={{action "logout"}}>LOGOUT</a></li>
       {{else}}
       <li class="col-12 text-center">{{#side-menu-link-to "login"}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>

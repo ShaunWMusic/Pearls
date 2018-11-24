@@ -29,7 +29,7 @@ export default Controller.extend({
     unsubscribe() {
        this.store.query('customer', {
         filter: {
-          unsubscribe: this.model.customer.content[0].__data.source
+          unsubscribe: this.get('currentUser').user.id
         }
       })
       .then(() => {

@@ -15,7 +15,7 @@ export default Route.extend({
       // })
       customer: this.store.query('customer', {
         filter: {
-          userId: id
+          receipt: this.get('currentUser').user.id
         }
       }),
     });
