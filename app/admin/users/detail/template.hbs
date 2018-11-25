@@ -13,6 +13,10 @@
 <br>
 {{#if model.customer}}
 <div onclick={{action "unsubscribe"}} style="cursor: pointer;" class="yellowbutton block">Unsubscribe</div>
+{{else}}
+<p>To re-subscribe please contact support:</p>
+<div style="cursor: pointer;" class="yellowbutton block"><a href="mailTo:pearlsbeardoil@gmail.com">Contact Support</a></div>
+{{!-- <div onclick={{action "subscribe"}} style="cursor: pointer;" class="yellowbutton block">Subscribe</div> --}}
 {{/if}}
 <!-- <p>{{currentUser.user.admin}}</p> -->
 <!-- <p>{{currentUser.user.barbershop}}</p> -->

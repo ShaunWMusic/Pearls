@@ -35,6 +35,16 @@ export default Controller.extend({
       .then(() => {
         this.transitionToRoute('admin.users.unsubscribe-success');
       })
-    }
+    },
+    // subscribe() {
+    //    this.store.query('customer', {
+    //     filter: {
+    //       subscribe: this.get('currentUser').user.id
+    //     }
+    //   })
+    //   .then(() => {
+    //     // this.transitionToRoute('admin.users.subscribe-success');
+    //   })
+    // }
   }
 });
