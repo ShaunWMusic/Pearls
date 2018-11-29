@@ -30,14 +30,20 @@ Router.map(function() {
   });
   this.route('register');
   this.route('login');
-  this.route('products');
+  this.route('products', function() {
+    this.route('subscription');
+    this.route('one-time-purchase');
+  });
   this.route('video-announcement');
 
   this.route('users', function() {});
   this.route('guidelines');
   this.route('privacy-policy');
   this.route('checkout', { path: '/checkout/:id' });
-  this.route('checkout-complete');
+  this.route('checkout-complete', function() {
+    this.route('subscription');
+    this.route('one-time-purchase');
+  });
   this.route('forgotpassword', { path: '/updatepassword' });
   this.route('passwordresetconfirmation');
   this.route('resetpassword', { path: '/forgot-password/:id'});

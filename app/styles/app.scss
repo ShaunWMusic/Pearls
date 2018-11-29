@@ -483,3 +483,22 @@ ul {
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
+
+
+
+
+.tabs .active {
+  color: black!important;
+  padding: 6px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-top: 2px solid #f3a536;
+  border-bottom: 0px solid black;
+}
+
+.tabs a {
+  color: #5b5b6570!important;
+  padding: 6px;
+  margin: -2.6px;
+  border-bottom: 1px solid black;
+}

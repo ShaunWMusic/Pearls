@@ -14,58 +14,19 @@
             available in two different scents for you to enjoy.
           </p>
 
-          <h3>Customize Your Subscription</h3>
-          <div class="text-center" style="border: 1px solid #f3a536; width: 8rem; margin: auto;"></div>
-            {{#each errors as |error|}}
-            <p style="color: red; margin-top: 2rem;">{{error.meta.exception}}</p>
-            {{/each}}
-          <div class="row justify-content-center"  style="margin-top: 4rem;">
-            <div class="col-sm">
-              <img style="max-width: 5rem;" src="./img/IMG_0584.png" alt="">
-            </div>
-            <div class="col-sm align-self-center">
-              <p style="margin-top: 0rem; margin-bottom: 0rem;">$13.99 / month</p>
-              <p style="margin-top: 0rem; margin-bottom: 0rem;">Free Shipping, Cancel Anytime</p>
-              <p style="margin-top: 0rem; margin-bottom: 0rem;">100% Money Back Guarantee</p>
-              {{!-- <p style="margin-top: 0rem; margin-bottom: 0rem">15ml / 0.5oz</p> --}}
-              {{!-- <p style="margin-top: 0rem;">free shipping, cancel anytime</p> --}}
-          {{!-- {{#if session.isAuthenticated}}
-            {{#link-to 'admin.users.editscents' currentUser.user.id}}<button class="yellowbutton">Schedule Scents</button>{{/link-to}}
-            {{else}}
-            {{#link-to 'register'}}<button class="yellowbutton">Be a Product Tester</button>{{/link-to}}
-          {{/if}} --}}
-              <form onsubmit={{action "processStripeToken"}}>
-                {{!-- {{input value=model.email placeholder="Email"}}<br> --}}
-                {{#power-select 
-                placeholder="Choose Your Scented Beard Oil"
-                options=products 
-                searchEnabled=false
-                selected=model.product 
-                onchange=(action (mut model.product)) as |product|}}
-                {{product}}
-                {{/power-select}}
-                
-                  {{stripe-checkout
-                  image="/img/beard-logo-1.jpg"
-                  name="Pearl's Beard Oil"
-                  description="Monthly Subscription"
-                  amount=1399
-                  label="Subscribe"
-                  shippingAddress=true
-                  billingAddress=true
-                  onToken=(action "processStripeToken")
-                  class="yellowbutton"
-                  }}
-                  
+          <h3 style="margin-bottom: 2rem;">Customize Your Order</h3>
+          {{!-- <div class="text-center" style="border: 1px solid #f3a536; width: 8rem; margin: auto;"></div> --}}
 
-              </form>
-            </div>
-          
+          <div class="tabs">
+            {{#link-to 'products.one-time-purchase'}}One-time Purchase{{/link-to}}
+            {{#link-to 'products.subscription'}}Subscribe{{/link-to}}
           </div>
+          {{outlet}}
+
         </div>
     </div>
     <div class="row justify-content-center text-center">
-      <div class="col-10">
+      <div class="col-xs-12 col-lg-10">
         <!-- Your embedded comments code -->
       <div class="fb-comments" style="max-width" data-href="https://www.pearlsbeardoil.com#products" data-width="100%"
         data-numposts="5"></div>

@@ -1,0 +1,39 @@
+{{#each errors as |error|}}
+<p style="color: red; margin-top: 2rem;">{{error.meta.exception}}</p>
+{{/each}}
+<div class="row justify-content-center" style="margin-top: 4rem;">
+    <div class="col-sm">
+        <img style="max-width: 5rem;" src="./../img/IMG_0584.png" alt="">
+    </div>
+    <div class="col-sm align-self-center">
+        <p style="margin-top: 0rem; margin-bottom: 0rem;">$13.99  <strong>(One-time Purchase)</strong></p>
+        <p style="margin-top: 0rem; margin-bottom: 0rem;">Free Shipping, Cancel Anytime</p>
+        <p style="margin-top: 0rem; margin-bottom: 0rem;">100% Money Back Guarantee</p>
+
+        <form onsubmit={{action "processStripeToken"}}>
+            {{#power-select
+            placeholder="Choose Your Scented Beard Oil"
+            options=products
+            searchEnabled=false
+            selected=model.product
+            onchange=(action (mut model.product)) as |product|}}
+            {{product}}
+            {{/power-select}}
+
+            {{stripe-checkout
+            image="/img/beard-logo-1.jpg"
+            name="Pearl's Beard Oil"
+            description="One-time Purchase"
+            amount=1399
+            label="Purchase"
+            shippingAddress=true
+            billingAddress=true
+            onToken=(action "processStripeToken")
+            class="yellowbutton"
+            }}
+
+
+        </form>
+    </div>
+
+</div>

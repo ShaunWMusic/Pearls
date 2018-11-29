@@ -1,0 +1,46 @@
+{{#each errors as |error|}}
+<p style="color: red; margin-top: 2rem;">{{error.meta.exception}}</p>
+{{/each}}
+<div class="row justify-content-center" style="margin-top: 4rem;">
+    <div class="col-sm">
+        <img style="max-width: 5rem;" src="./../img/IMG_0584.png" alt="">
+    </div>
+    <div class="col-sm align-self-center">
+        <p style="margin-top: 0rem; margin-bottom: 0rem;">$10.99 / month</p>
+        <p style="margin-top: 0rem; margin-bottom: 0rem;">Free Shipping, Cancel Anytime</p>
+        <p style="margin-top: 0rem; margin-bottom: 0rem;">100% Money Back Guarantee</p>
+        {{!-- <p style="margin-top: 0rem; margin-bottom: 0rem">15ml / 0.5oz</p> --}}
+        {{!-- <p style="margin-top: 0rem;">free shipping, cancel anytime</p> --}}
+        {{!-- {{#if session.isAuthenticated}}
+        {{#link-to 'admin.users.editscents' currentUser.user.id}}<button class="yellowbutton">Schedule Scents</button>{{/link-to}}
+        {{else}}
+        {{#link-to 'register'}}<button class="yellowbutton">Be a Product Tester</button>{{/link-to}}
+        {{/if}} --}}
+        <form onsubmit={{action "processStripeToken"}}>
+            {{!-- {{input value=model.email placeholder="Email"}}<br> --}}
+            {{#power-select
+            placeholder="Choose Your Scented Beard Oil"
+            options=products
+            searchEnabled=false
+            selected=model.product
+            onchange=(action (mut model.product)) as |product|}}
+            {{product}}
+            {{/power-select}}
+
+            {{stripe-checkout
+            image="/img/beard-logo-1.jpg"
+            name="Pearl's Beard Oil"
+            description="Monthly Subscription"
+            amount=1099
+            label="Subscribe"
+            shippingAddress=true
+            billingAddress=true
+            onToken=(action "processStripeToken")
+            class="yellowbutton"
+            }}
+
+
+        </form>
+    </div>
+
+</div>
