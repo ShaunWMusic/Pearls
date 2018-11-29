@@ -24,7 +24,7 @@ module.exports = function(environment) {
       // when it is created
     },
     stripe: {
-      key: process.env.STRIPE_TEST_KEY,
+      key: process.env.STRIPE_KEY,
     },
 
     'ember-simple-auth-token': {
