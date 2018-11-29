@@ -11,7 +11,7 @@ export default Controller.extend({
         identification: formValues.email,
         password: formValues.password
       }).then(() => {
-        this.transitionToRoute('index');
+        this.transitionToRoute('thanks');
       }).catch((e) => {
         this.set('errors', e.errors);
       });
