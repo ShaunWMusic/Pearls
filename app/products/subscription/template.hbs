@@ -2,8 +2,14 @@
 <p style="color: red; margin-top: 2rem;">{{error.meta.exception}}</p>
 {{/each}}
 <div class="row justify-content-center" style="margin-top: 4rem;">
-    <div class="col-sm">
+    <div class="col-sm mb1">
+        {{#if (eq model.product "Sandy Cheeks")}}
+        <img style="max-width: 16rem;" src="./../img/{{model.product}}.jpeg" alt="">
+        {{else if (eq model.product "Beard Bark")}}
+        <img style="max-width: 16rem;" src="./../img/{{model.product}}.jpeg" alt="">
+        {{else}}
         <img style="max-width: 5rem;" src="./../img/IMG_0584.png" alt="">
+        {{/if}}
     </div>
     <div class="col-sm align-self-center">
         <p style="margin-top: 0rem; margin-bottom: 0rem;">$10.99 / month</p>
