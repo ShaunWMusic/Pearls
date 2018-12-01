@@ -19,7 +19,6 @@ products: ['Sandy Cheeks', 'Beard Bark'],
 
 actions: {
   selectDivision(selected) {
-    debugger;
     this.set('product', selected);
   },
    /**
