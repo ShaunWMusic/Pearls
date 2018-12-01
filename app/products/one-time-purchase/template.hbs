@@ -3,12 +3,19 @@
 {{/each}}
 <div class="row justify-content-center" style="margin-top: 4rem;">
     <div class="col-sm mb1">
+        {{!-- https://www.npmjs.com/package/ember-cli-zoom-js --}}
+        {{!-- https://www.npmjs.com/package/ember-image-magnifier --}}
+        {{!-- https://www.google.com/search?ei=q8IBXNH2Hsea_Qak5ZaICg&q=how+to+take+a+pic+that+lets+your+product+move&oq=how+to+take+a+pic+that+lets+your+product+move&gs_l=psy-ab.3...7855.19292..19427...9.0..0.218.3100.28j5j1......0....1..gws-wiz.......0i71j35i39j0i22i30j33i22i29i30j33i299j33i10.WvsXZTdHnzs
+         --}}
+         {{!-- https://youtu.be/vgcBEm8358Q --}}
+        {{!-- http://us.orangemonkie.com/cart/ --}}
+        {{!-- http://orangemonkie.com/elements/review/ --}}
         {{#if (eq model.product "Sandy Cheeks")}}
-        <img style="max-width: 16rem;" src="./../img/{{model.product}}.jpeg" alt="">
+        <img style="max-width: 16rem;" src="./../img/{{model.product}}.png" alt="">
         {{else if (eq model.product "Beard Bark")}}
-        <img style="max-width: 16rem;" src="./../img/{{model.product}}.jpeg" alt="">
+        <img style="max-width: 16rem;" src="./../img/{{model.product}}.png" alt="">
         {{else}}
-        <img style="max-width: 5rem;" src="./../img/IMG_0584.png" alt="">
+        <img style="max-width: 16rem;" src="./../img/Beard Bark.png" alt="">
         {{/if}}
     </div>
     <div class="col-sm align-self-center">
