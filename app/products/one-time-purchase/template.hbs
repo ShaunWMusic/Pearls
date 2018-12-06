@@ -54,7 +54,7 @@
             onchange=(action (mut model.product)) as |product|}}
             {{product}}
             {{/power-select}}
-
+            {{#if (eq model.product "Sandy Cheeks")}}
             <p style="margin-bottom: 0rem; margin-top: 2rem;">Step 2 - Purchase</p>
             {{stripe-checkout
             image="/img/beard-logo-1.jpg"
@@ -67,8 +67,23 @@
             onToken=(action "processStripeToken")
             class="yellowbutton"
             }}
-
-
+            {{else if (eq model.product "Beard Bark")}}
+            <p style="margin-bottom: 0rem; margin-top: 2rem;">Step 2 - Purchase</p>
+            {{stripe-checkout
+            image="/img/beard-logo-1.jpg"
+            name="Pearl's Beard Oil"
+            description="One-time Purchase"
+            amount=1399
+            label="Purchase"
+            shippingAddress=true
+            billingAddress=true
+            onToken=(action "processStripeToken")
+            class="yellowbutton"
+            }}
+            {{else}}
+            <p style="margin-bottom: 0rem; margin-top: 2rem;">Step 2 - Purchase</p>
+            <div class="yellowbutton">Purchase</div>
+            {{/if}}
         </form>
     </div>
 
