@@ -2,6 +2,24 @@
 <p style="color: red; margin-top: 2rem;">{{error.meta.exception}}</p>
 {{/each}}
 <div class="row justify-content-center" style="margin-top: 4rem;">
+    <div class="col-lg-3 mb1">
+        {{#if (eq model.product "Sandy Cheeks")}}
+        <h4>Sandy Cheeks</h4>
+        <p>15ml / 0.5oz bottle</p>
+        <p>On average this bottle should last a month.</p>
+        <p>Sandy Cheeks has a soft beachy smell that is pleasant to the nose.</p>
+        <p>Ingredients: Grape seed oil, bergamot and myrrh</p>
+        {{else if (eq model.product "Beard Bark")}}
+        <h4>Beard Bark</h4>
+        <p>15ml / 0.5oz bottle</p>
+        <p>On average this bottle should last a month.</p>
+        <p>Beard Bark smells like you just rubbed your face on a tree. Your lady will love it.</p>
+        <p>Ingredients: Apricot oil, atlas, cedar and patchouli</p>
+        {{else}}
+        <h4>Choose a Scent</h4>
+        <p>Fix Dry Beard. Better the Environment. Zero Household Waste. Scented Beard Oil Products.</p>
+        {{/if}}
+    </div>
     <div class="col-sm mb1">
         {{!-- https://www.npmjs.com/package/ember-cli-zoom-js --}}
         {{!-- https://www.npmjs.com/package/ember-image-magnifier --}}
@@ -26,9 +44,10 @@
         <p style="margin-top: 0rem; margin-bottom: 0rem;">Free Shipping, Cancel Anytime</p>
         <p style="margin-top: 0rem; margin-bottom: 0rem;">100% Money Back Guarantee</p>
 
-        <form onsubmit={{action "processStripeToken"}}>
+        <form onsubmit={{action "processStripeToken"}} style="max-width: 17rem; margin-left: auto; margin-right: auto;">
+            <p style="margin-bottom: 0rem;">Step 1 - Choose Scent</p>
             {{#power-select
-            placeholder="Choose Your Scented Beard Oil"
+            placeholder="Choose Your Beard Oil Scent"
             options=products
             searchEnabled=false
             selected=model.product
@@ -36,6 +55,7 @@
             {{product}}
             {{/power-select}}
 
+            <p style="margin-bottom: 0rem; margin-top: 2rem;">Step 2 - Purchase</p>
             {{stripe-checkout
             image="/img/beard-logo-1.jpg"
             name="Pearl's Beard Oil"
