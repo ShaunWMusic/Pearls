@@ -14,11 +14,13 @@ export default Controller.extend({
         {
         "propertyName": "updatedAt",
          "component": "updatedAt",
+         "className": "hidemobile",
         "editable": false
         },
         {
         "propertyName": "createdAt",
          "component": "createdAt",
+         "className": "hidemobile",
         "editable": false
         },
         {
@@ -45,11 +47,13 @@ export default Controller.extend({
         {
         "propertyName": "updatedAt",
         "component": "updatedAt",
+         "className": "hidemobile",
         "editable": false
         },
         {
         "propertyName": "createdAt",
         "component": "createdAt",
+         "className": "hidemobile",
         "editable": false
         },
         {

@@ -1,0 +1,17 @@
+<div style="text-align: center; max-width: 20rem; margin: 2rem auto;">
+    <h3 style="border-bottom: 1px solid #f3a536; margin-bottom: 2rem;">Add Tracking Number</h3>
+<!-- <h3 style="color: white; text-align: center; margin: auto; float: none;">EDIT PROFILE</h3> -->
+<div class="detail">
+    <div class="detail-card">
+        <!-- <div class="detail-card__title">Edit Details</div> -->
+        {{#simple-form class="card__form" startingValues=model onsubmit=(action "updateForm") as | formValues |}}
+        <p>{{log model}}</p>
+        {{input class="form_input mb1" type="text" value=formValues.trackingNumber}}
+        <!-- An element to toggle between password visibility -->
+        
+        <button type="submit" class="btn" style="background: #002039;">Add Tracking Number</button><br />
+        {{#link-to "admin.customer_inventories" class="btn yellowbutton"}}Back{{/link-to}}
+        {{/simple-form}}
+    </div>
+</div>
+</div>

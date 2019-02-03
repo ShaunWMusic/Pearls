@@ -41,10 +41,34 @@
 <!-- ///////////////////////////////////////// -->
 <!-- /////////////MOBILE VIEW//////////////// -->
 <!-- ///////////////////////////////////////// -->
-<div class="hidedesktop" style="text-align: left; margin-top: 2rem; border-top: 1px solid black; padding-top: 2rem;">
-    <h3 style="padding-bottom: 2rem;">Customer List</h3>
-    {{#each model.subscribers as |user|}}
-        <p style="border-bottom: 1px solid black; max-width: 20rem;"><strong>Email:</strong> {{log user.email}}</p>
-        {{!-- <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Customer:</strong> {{view.customer}}</p> --}}
-    {{/each}}
+<div class="container">
+    <div class="hidedesktop" style="text-align: left; margin-top: 2rem; padding-top: 2rem;">
+        <h3 style="padding-bottom: 2rem;">Subscribers</h3>
+        {{#each model.subscriber as |user|}}
+            <div style="margin-bottom: 2rem;">
+            <p style=" max-width: 20rem; margin-bottom: 0rem;"><strong>Email:</strong> {{user.email}}</p>
+            <p style=" max-width: 20rem; margin-bottom: 0rem;"><strong>Updated At:</strong> {{moment-format user.createdAt "MMM"}} {{moment-format user.createdAt "DD"}}, {{moment-format user.createdAt
+            "YYYY"}} {{moment-format user.createdAt "hh:mma"}}</p>
+            {{#if (eq user.trackingNumber '')}}
+            {{#link-to "admin.customer-inventories_edits" user.id}}<p style=" max-width: 20rem;"><strong>Tracking Number:</strong> {{user.trackingNumber}}</p>{{/link-to}}
+            {{else}}
+            <p style=" max-width: 20rem;"><strong>Tracking Number:</strong> {{user.trackingNumber}}</p>
+            {{/if}}
+            {{!-- <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Customer:</strong> {{view.customer}}</p> --}}
+            </div>
+        {{/each}}
+    </div>
+    <div class="hidedesktop" style="text-align: left; margin-top: 4rem; padding-top: 2rem;">
+        <h3 style="padding-bottom: 2rem;">One-Time Purchaser</h3>
+        {{#each model.onetime as |user|}}
+        <div style="margin-bottom: 2rem;">
+            <p style="max-width: 20rem; margin-bottom: 0rem;"><strong>Email:</strong> {{user.receiptEmail}}</p>
+            <p style=" max-width: 20rem; margin-bottom: 0rem;"><strong>Updated At:</strong> {{moment-format user.createdAt "MMM"}}
+                {{moment-format user.createdAt "DD"}}, {{moment-format user.createdAt
+                "YYYY"}} {{moment-format user.createdAt "hh:mma"}}</p>
+            <p style="max-width: 20rem;"><strong>Tracking Number:</strong> {{user.trackingNumber}}</p>
+            {{!-- <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Customer:</strong> {{view.customer}}</p> --}}
+        </div>
+        {{/each}}
+    </div>
 </div>

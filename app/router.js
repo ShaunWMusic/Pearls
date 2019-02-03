@@ -27,6 +27,7 @@ Router.map(function() {
     this.route('customer_inventories');
     this.route('stats');
     this.route('oilinventory');
+    this.route('customer-inventories_edits', { path: 'subscriber/edit/:id' });
   });
   this.route('register');
   this.route('login');
