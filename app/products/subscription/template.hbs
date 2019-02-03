@@ -25,13 +25,13 @@
     <div class="col-sm mb1">
         {{#if (eq model.product "Sandy Cheeks")}}
         {{!-- <img style="max-width: 16rem;" src="./../img/{{model.product}}.PNG" alt=""> --}}
-        <img style="max-width: 5rem;" src="./../img/IMG_0584.png" alt="">
+        <img style="max-width: 20rem; border: 1px solid #f3a536;" src="./../img/IMG_1961.jpg" alt="">
         {{else if (eq model.product "Beard Bark")}}
         {{!-- <img style="max-width: 16rem;" src="./../img/{{model.product}}.PNG" alt=""> --}}
-        <img style="max-width: 5rem;" src="./../img/IMG_0584.png" alt="">
+        <img style="max-width: 20rem; border: 1px solid #f3a536;" src="./../img/IMG_1962.jpg" alt="">
         {{else}}
         {{!-- <img style="max-width: 16rem;" src="./../img/Beard Bark.PNG" alt=""> --}}
-        <img style="max-width: 5rem;" src="./../img/IMG_0584.png" alt="">
+        <img style="max-width: 20rem; border: 1px solid #f3a536;" src="./../img/IMG_1962.jpg" alt="">
         {{/if}}
     </div>
     <div class="col-sm align-self-center">
@@ -59,7 +59,7 @@
             {{#if (eq model.product "Sandy Cheeks")}}
             <p style="margin-bottom: 0rem; margin-top: 2rem;">Step 2 - Subscribe</p>
             {{stripe-checkout
-            image="/img/beard-logo-1.jpg"
+            image="/img/IMG_1961.jpg"
             name="Pearl's Beard Oil"
             description="Monthly Subscription"
             amount=1099
@@ -72,7 +72,7 @@
             {{else if (eq model.product "Beard Bark")}}
             <p style="margin-bottom: 0rem; margin-top: 2rem;">Step 2 - Subscribe</p>
             {{stripe-checkout
-            image="/img/beard-logo-1.jpg"
+            image="/img/IMG_1962.jpg"
             name="Pearl's Beard Oil"
             description="Monthly Subscription"
             amount=1099
