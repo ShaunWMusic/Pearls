@@ -17,7 +17,7 @@
         <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "admin.users.detail" currentUser.user.id}}ACCOUNT{{/side-menu-link-to}}</li>
         <li class="col text-center" style="margin-top: auto; margin-bottom: auto;"><a href="#" onclick={{action "logout"}}>LOGOUT</a></li>
         {{else}}
-        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "login"}}ACCOUNT{{/side-menu-link-to}}</li>
+        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "login"}}LOGIN{{/side-menu-link-to}}</li>
         {{/if}}
       </ul>
       {{#side-menu-toggle class="col hide992px justify-content-end mtpoint5 mt500px" id="menuToggle"}}
@@ -46,7 +46,7 @@
     <li class="col-12 text-center">{{#side-menu-link-to "admin.users.detail" currentUser.user.id}}ACCOUNT{{/side-menu-link-to}}</li>
     <li class="col-12 text-center"><a href="#" onclick={{action "logout"}}>LOGOUT</a></li>
       {{else}}
-      <li class="col-12 text-center">{{#side-menu-link-to "login"}}ACCOUNT{{/side-menu-link-to}}</li>
+      <li class="col-12 text-center">{{#side-menu-link-to "login"}}LOGIN{{/side-menu-link-to}}</li>
     {{/if}}
   </ul>
 {{/side-menu}}
