@@ -1,8 +1,12 @@
 {{#if session.isAuthenticated}}
+<div class="container">
 {{#link-to 'admin.customer_inventories' class="text-center tab"}}Tracking{{/link-to}}
 {{#link-to 'admin.contacts' class="text-center tab"}}Barbers{{/link-to}}
 {{#link-to 'admin.barbershop_inventories' class="text-center tab tab-active"}}Barbershops{{/link-to}}
 {{!-- {{#link-to 'admin.oilinventory' class="text-center tab"}}Oil Inventory{{/link-to}} --}}
+</div>
+<div class="container">
+
 <div class="hidemobile">
   {{models-table
   data=model.barbershopInventory
@@ -22,6 +26,8 @@
   showPageSize=showPageSize
 }}
 </div>
+</div>
+<div class="container">
   <table class="hidemobile" style="width:100%">
      <form onsubmit={{action "newBarbershop"}}>
      <tr>
@@ -36,11 +42,12 @@
      </tr>
      </form>
   </table>
+</div>
 
   <!-- ///////////////////////////////////////// -->
   <!-- /////////////MOBILE VIEW//////////////// -->
   <!-- ///////////////////////////////////////// -->
-
+<div class="container">
   <form id="contactform" class="hidedesktop" style=" justify-content: center; text-align: center;" onsubmit={{action "newBarbershop"}}>
     <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.deliveryDate placeholder="delivery date"}}</div>
     <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.barbershopName placeholder="barbershop name"}}</div>
@@ -57,10 +64,10 @@
       <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Barbershop:</strong> {{view.barbershopName}}</p>
     {{/each}}
   </div>
+  </div>
   {{else}}
   <div class="text-center">
   <h1> Sorry, you do not have admin access. Please login.</h1>
   {{#link-to 'login'}}Login{{/link-to}}
   </div>
-
 {{/if}}

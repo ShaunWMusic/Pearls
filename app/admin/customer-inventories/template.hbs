@@ -1,7 +1,9 @@
+<div class="container">
 {{#link-to 'admin.customer_inventories' class="text-center tab  tab-active"}}Tracking{{/link-to}}
 {{#link-to 'admin.contacts' class="text-center tab"}}Barbers{{/link-to}} 
 {{#link-to 'admin.barbershop_inventories' class="text-center tab"}}Barbershops{{/link-to}} 
 {{!-- {{#link-to 'admin.oilinventory' class="text-center tab"}}Oil Inventory{{/link-to}} --}}
+</div>
 <div class="container">
 <div class="hidemobile">
     {{models-table data=model.subscriber
@@ -66,7 +68,11 @@
             <p style=" max-width: 20rem; margin-bottom: 0rem;"><strong>Updated At:</strong> {{moment-format user.createdAt "MMM"}}
                 {{moment-format user.createdAt "DD"}}, {{moment-format user.createdAt
                 "YYYY"}} {{moment-format user.createdAt "hh:mma"}}</p>
+            {{#if (eq user.trackingNumber '')}}
+            {{#link-to "admin.customer-inventories_editsonetime" user.id}}<p style="max-width: 20rem;"><strong>Tracking Number:</strong> {{user.trackingNumber}}</p>{{/link-to}}
+            {{else}}
             <p style="max-width: 20rem;"><strong>Tracking Number:</strong> {{user.trackingNumber}}</p>
+            {{/if}}
             {{!-- <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Customer:</strong> {{view.customer}}</p> --}}
         </div>
         {{/each}}

@@ -5,7 +5,7 @@
     <div class="detail-card">
         <!-- <div class="detail-card__title">Edit Details</div> -->
         {{#simple-form class="card__form" startingValues=model onsubmit=(action "updateForm") as | formValues |}}
-        <p>{{model.email}}</p>
+        <p>{{model.receiptEmail}}</p>
         {{input class="form_input mb1" type="text" value=formValues.trackingNumber}}
         
         <button type="submit" class="btn" style="background: #002039;">Add Tracking Number</button><br />

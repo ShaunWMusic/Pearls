@@ -1,12 +1,16 @@
+
 {{#if session.isAuthenticated}}
+<div class="container">
 {{#link-to 'admin.customer_inventories' class="text-center tab"}}Tracking{{/link-to}}
 {{#link-to 'admin.contacts' class="text-center tab tab-active"}}Barbers{{/link-to}}
 {{#link-to 'admin.barbershop_inventories' class="text-center tab"}}Barbershops{{/link-to}}
 {{!-- {{#link-to 'admin.oilinventory' class="text-center tab"}}Oil Inventory{{/link-to}} --}}
-
+</div>
 <!-- ///////////////////////////////////////// -->
 <!-- /////////////DESKTOP VIEW//////////////// -->
 <!-- ///////////////////////////////////////// -->
+<div class="container">
+
 <div class="hidemobile">
   {{models-table
   data=model.contacts
@@ -26,6 +30,9 @@
   showPageSize=showPageSize
 }}
 </div>
+</div>
+<div class="container">
+
   <table class="hidemobile" style="width:100%">
      <form onsubmit={{action "newContact"}}>
      <tr>
@@ -40,10 +47,12 @@
      </tr>
      </form>
   </table>
+</div>
+
   <!-- ///////////////////////////////////////// -->
   <!-- /////////////MOBILE VIEW//////////////// -->
   <!-- ///////////////////////////////////////// -->
-
+<div class="container">
   <form id="contactform" class="hidedesktop" style=" justify-content: center; text-align: center;" onsubmit={{action "newContact"}}>
     <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.barbershop placeholder="barbershop"}}</div>
     <div style="flex-basis: 20%; flex-grow: 1; margin-bottom: 1rem;">{{input class="" type="text" value=model.contactPerson placeholder="contact person"}}</div>
@@ -61,6 +70,7 @@
       <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Contact:</strong> {{view.contactPerson}}</p>
       {{/link-to}}
     {{/each}}
+  </div>
   </div>
   {{else}}
   <div class="text-center">

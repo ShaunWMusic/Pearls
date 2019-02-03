@@ -28,6 +28,7 @@ Router.map(function() {
     this.route('stats');
     this.route('oilinventory');
     this.route('customer-inventories_edits', { path: 'subscriber/edit/:id' });
+    this.route('customer-inventories_editsonetime', { path: 'onetimepurchaser/edit/:id' });
   });
   this.route('register');
   this.route('login');

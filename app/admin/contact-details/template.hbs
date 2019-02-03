@@ -1,4 +1,5 @@
 {{#if session.isAuthenticated}}
+<div class="container">
 {{#link-to 'admin.contacts' class="text-center tab tab-active"}}Barbers{{/link-to}}
 {{#link-to 'admin.barbershop_inventories' class="text-center tab"}}Barbershops{{/link-to}}
 {{#link-to 'admin.customer_inventories' class="text-center tab"}}Customers{{/link-to}}
@@ -11,6 +12,7 @@
     <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Website:</strong> {{model.website}}</p>
     <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Address:</strong> {{model.address}}</p>
     <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Call Log:</strong> {{model.callLog}}</p>
+</div>
 </div>
 {{else}}
 

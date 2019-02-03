@@ -1,7 +1,7 @@
 
 <header class="container">
   <nav class="row mt2">
-    <div class="col-7">
+    <div class="col-5">
         {{#link-to 'index'}}<img src="/img/logo.jpg" style="max-width: 22rem;" alt="Pearls Beard Oil Logo">{{/link-to}}
     </div>
     <!--/////////////////// -->
@@ -9,15 +9,15 @@
     <!--/////////////////// -->
       <ul class="col row mt1 hide991px">
         <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "index"}}HOME{{/side-menu-link-to}}</li>
-        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to 'products.subscription'}}PRODUCTS{{/side-menu-link-to}}</li>
-        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "about-us"}}{{fa-icon "info-circle"}}{{/side-menu-link-to}}</li>
-        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "announcements"}}{{fa-icon "bullhorn"}}{{/side-menu-link-to}}</li>
-        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "faq"}}{{fa-icon "question"}}{{/side-menu-link-to}}</li>
+        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "products.subscription"}}PRODUCTS{{/side-menu-link-to}}</li>
+        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "about-us"}}ABOUT{{/side-menu-link-to}}</li>
+        {{!-- <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "announcements"}}{{fa-icon "bullhorn"}}{{/side-menu-link-to}}</li> --}}
+        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "faq"}}FAQ{{/side-menu-link-to}}</li>
         {{#if session.isAuthenticated}}
-        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "admin.users.detail" currentUser.user.id}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
+        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "admin.users.detail" currentUser.user.id}}ACCOUNT{{/side-menu-link-to}}</li>
         <li class="col text-center" style="margin-top: auto; margin-bottom: auto;"><a href="#" onclick={{action "logout"}}>LOGOUT</a></li>
         {{else}}
-        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "login"}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
+        <li class="col text-center" style="margin-top: auto; margin-bottom: auto;">{{#side-menu-link-to "login"}}ACCOUNT{{/side-menu-link-to}}</li>
         {{/if}}
       </ul>
       {{#side-menu-toggle class="col hide992px justify-content-end mtpoint5 mt500px" id="menuToggle"}}
@@ -39,14 +39,14 @@
   <ul class="nav">
     <li class="col-12 text-center">{{#side-menu-link-to "index"}}HOME{{/side-menu-link-to}}</li>
     <li class="col-12 text-center">{{#side-menu-link-to 'products.subscription'}}PRODUCTS{{/side-menu-link-to}}</li>
-    <li class="col-12 text-center">{{#side-menu-link-to "about-us"}}{{fa-icon "info-circle"}}{{/side-menu-link-to}}</li>
-    <li class="col-12 text-center">{{#side-menu-link-to "announcements"}}{{fa-icon "bullhorn"}}{{/side-menu-link-to}}</li>
-    <li class="col-12 text-center">{{#side-menu-link-to "faq"}}{{fa-icon "question"}}{{/side-menu-link-to}}</li>
+    <li class="col-12 text-center">{{#side-menu-link-to "about-us"}}ABOUT{{/side-menu-link-to}}</li>
+    {{!-- <li class="col-12 text-center">{{#side-menu-link-to "announcements"}}{{fa-icon "bullhorn"}}{{/side-menu-link-to}}</li> --}}
+    <li class="col-12 text-center">{{#side-menu-link-to "faq"}}FAQ{{/side-menu-link-to}}</li>
     {{#if session.isAuthenticated}}
-    <li class="col-12 text-center">{{#side-menu-link-to "admin.users.detail" currentUser.user.id}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
+    <li class="col-12 text-center">{{#side-menu-link-to "admin.users.detail" currentUser.user.id}}ACCOUNT{{/side-menu-link-to}}</li>
     <li class="col-12 text-center"><a href="#" onclick={{action "logout"}}>LOGOUT</a></li>
       {{else}}
-      <li class="col-12 text-center">{{#side-menu-link-to "login"}}{{fa-icon "user"}}{{/side-menu-link-to}}</li>
+      <li class="col-12 text-center">{{#side-menu-link-to "login"}}ACCOUNT{{/side-menu-link-to}}</li>
     {{/if}}
   </ul>
 {{/side-menu}}
