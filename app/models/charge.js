@@ -5,5 +5,8 @@ export default DS.Model.extend({
   description: DS.attr(), 
   currency: DS.attr(), 
   source: DS.attr(),
-  receipt_email: DS.attr(), 
+  receiptEmail: DS.attr(), 
+  trackingNumber: DS.attr(),
+  updatedAt: DS.attr(),
+  createdAt: DS.attr() 
 });

@@ -13,6 +13,8 @@ export default DS.Model.extend({
   source: DS.attr(),
   card: DS.attr(),
   username: DS.attr(),
-  createdAt: DS.attr()
+  trackingNumber: DS.attr(),
+  createdAt: DS.attr(),
+  updatedAt: DS.attr()
 });
 

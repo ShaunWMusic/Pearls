@@ -1,11 +1,14 @@
+{{#link-to 'admin.customer_inventories' class="text-center tab  tab-active"}}Tracking{{/link-to}}
 {{#link-to 'admin.contacts' class="text-center tab"}}Barbers{{/link-to}} 
 {{#link-to 'admin.barbershop_inventories' class="text-center tab"}}Barbershops{{/link-to}} 
-{{#link-to 'admin.customer_inventories' class="text-center tab  tab-active"}}Customers{{/link-to}}
-{{#link-to 'admin.oilinventory' class="text-center tab"}}Oil Inventory{{/link-to}}
+{{!-- {{#link-to 'admin.oilinventory' class="text-center tab"}}Oil Inventory{{/link-to}} --}}
+<div class="container">
 <div class="hidemobile">
-    {{models-table data=model 
+    {{models-table data=model.subscriber
     columns=columns 
-   
+    columnComponents=(hash editRow=(component "models-table/cell-edit-toggle" saveRowAction=(action "onSaveRow")
+    cancelRowAction=(action "onCancelRow")) createdAt=(component "created-at") updatedAt=(component "updated-at")
+    )
     showComponentFooter=showComponentFooter 
     showColumnsDropdown=showColumnsDropdown
     useFilteringByColumns=useFilteringByColumns
@@ -16,6 +19,23 @@
     multipleColumnsSorting=multipleColumnsSorting
     showPageSize=showPageSize }}
 </div>
+<div class="hidemobile">
+    {{models-table data=model.onetime
+    columns=columns2
+    columnComponents=(hash editRow=(component "models-table/cell-edit-toggle" saveRowAction=(action "onSaveRow")
+    cancelRowAction=(action "onCancelRow")) createdAt=(component "created-at") updatedAt=(component "updated-at")
+    )
+    showComponentFooter=showComponentFooter 
+    showColumnsDropdown=showColumnsDropdown
+    useFilteringByColumns=useFilteringByColumns
+    showGlobalFilter=showGlobalFilter
+    doFilteringByHiddenColumns=doFilteringByHiddenColumns
+    useNumericPagination=useNumericPagination
+    filteringIgnoreCase=filteringIgnoreCase
+    multipleColumnsSorting=multipleColumnsSorting
+    showPageSize=showPageSize }}
+</div>
+</div>
 
 
 <!-- ///////////////////////////////////////// -->
@@ -23,9 +43,8 @@
 <!-- ///////////////////////////////////////// -->
 <div class="hidedesktop" style="text-align: left; margin-top: 2rem; border-top: 1px solid black; padding-top: 2rem;">
     <h3 style="padding-bottom: 2rem;">Customer List</h3>
-    {{#each model as |view|}}
-    {{model.customer}}
-        <p style="border-bottom: 1px solid black; max-width: 20rem;"><strong>Email:</strong> {{view.email}}</p>
+    {{#each model.subscribers as |user|}}
+        <p style="border-bottom: 1px solid black; max-width: 20rem;"><strong>Email:</strong> {{log user.email}}</p>
         {{!-- <p style="border-bottom: 1px solid black; max-width: 15rem;"><strong>Customer:</strong> {{view.customer}}</p> --}}
     {{/each}}
 </div>
