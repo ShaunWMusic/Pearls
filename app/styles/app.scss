@@ -348,6 +348,18 @@ button {
   padding: 1rem 2.5rem;
   font-size: 18px;
   cursor: pointer;
+  -webkit-box-shadow: 13px 18px 84px -16px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 13px 18px 84px -16px rgba(0, 0, 0, 0.75);
+  box-shadow: 13px 18px 84px -16px rgba(0, 0, 0, 0.75);
+  border-radius: 1rem;
+}
+
+.yellowbutton:hover {
+  box-shadow: none;
+}
+
+.yellowbutton:focus {
+  outline: none;
 }
 
 .yellowbutton a {
@@ -502,4 +514,16 @@ ul {
   padding: 6px;
   margin: -2.6px;
   border-bottom: 1px solid black;
+}
+
+.icon img {
+  max-width: 100%;
+}
+
+.fa-instagram,
+.fa-twitter,
+.fa-facebook {
+  font-size: 4rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
