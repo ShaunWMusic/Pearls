@@ -52,7 +52,7 @@
             <p style=" max-width: 20rem; margin-bottom: 0rem;"><strong>Updated At:</strong> {{moment-format user.createdAt "MMM"}} {{moment-format user.createdAt "DD"}}, {{moment-format user.createdAt
             "YYYY"}} {{moment-format user.createdAt "hh:mma"}}</p>
             {{#if (eq user.trackingNumber '')}}
-            {{#link-to "admin.customer-inventories_edits" user.id}}<p style=" max-width: 20rem;"><strong>Tracking Number:</strong> {{user.trackingNumber}}</p>{{/link-to}}
+            {{#link-to "admin.customer-inventories_edits" user.id}}<p style=" max-width: 100%;"><button class="yellowbutton">Add Tracking Number</button></p>{{/link-to}}
             {{else}}
             <p style=" max-width: 20rem;"><strong>Tracking Number:</strong> {{user.trackingNumber}}</p>
             {{/if}}
@@ -69,7 +69,7 @@
                 {{moment-format user.createdAt "DD"}}, {{moment-format user.createdAt
                 "YYYY"}} {{moment-format user.createdAt "hh:mma"}}</p>
             {{#if (eq user.trackingNumber '')}}
-            {{#link-to "admin.customer-inventories_editsonetime" user.id}}<p style="max-width: 20rem;"><strong>Tracking Number:</strong> {{user.trackingNumber}}</p>{{/link-to}}
+            {{#link-to "admin.customer-inventories_editsonetime" user.id}}<p style="max-width: 100%;"><button class="yellowbutton">Add Tracking Number</button></p>{{/link-to}}
             {{else}}
             <p style="max-width: 20rem;"><strong>Tracking Number:</strong> {{user.trackingNumber}}</p>
             {{/if}}

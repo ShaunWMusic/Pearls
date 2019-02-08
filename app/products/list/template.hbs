@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row" style="margin-top: 2rem;">
+    <div class="col text-center">
+      <h1>The Best Beard Oil</h1>
+    </div>
+  </div>
+  <div class="row text-center justify-content-around" style="margin-top: 4rem;">
+    <div class="col-12 col-md-6 col-lg-4 col-lg-offset-4 text-center" style="margin-bottom: 2rem;">
+      {{#link-to "products.beard-bark"}}
+        <img class="click-product" style="
+        max-width: 100%;
+        border: 1px solid #f3a536;
+        object-fit: cover;
+        height: 31rem;   
+        " src="./../img/IMG_1962.jpg" alt="">
+      {{/link-to}}
+        <div class="row justify-space-between" style="margin-top: 0.5rem;">
+          <div class="col">
+            <p>Beard Bark</p>
+          </div>
+          <div class="col">
+            <p>$10.99/month</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            {{#link-to "products.beard-bark"}}<button class="yellowbutton" style="width: 100%;">{{fa-icon 'shopping-cart'}} SHOP</button>{{/link-to}}
+          </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4" style="margin-bottom: 2rem;">
+      {{#link-to "products.sandy-cheeks"}}<img class="click-product" style="
+      max-width: 100%; 
+      border: 1px solid #f3a536; 
+      object-fit: cover;
+      height: 31rem;
+      " src="./../img/IMG_1961.jpg" alt="">{{/link-to}}
+      <div class="row justify-space-between" style="margin-top: 0.5rem;">
+        <div class="col">
+          <p>Sandy Cheeks</p>
+        </div>
+        <div class="col">
+          <p>$10.99/month</p>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col">
+            {{#link-to "products.sandy-cheeks"}}<button class="yellowbutton" style="width: 100%;">{{fa-icon 'shopping-cart'}} SHOP</button>{{/link-to}}
+          </div>
+        </div>
+    </div>
+  </div>
+  
+</div>
+{{outlet}}

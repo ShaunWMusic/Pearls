@@ -1,19 +1,20 @@
 <section style="">
   <div class="container" style="overflow: hidden;">
-    <div class="row" style="margin-bottom: 4rem;">
+    <div class="row justify-content-center text-center" style="margin-bottom: 4rem;">
       <div class="col col-xl-7 mt4 text-center">
         <h1>The Best Beard Oil Products</h1>
         <h3 style="margin-bottom: 0px;">Only the best</h3>
         <h3 style="margin-bottom: 2rem;">for the best beards.</h3>
-        {{#link-to 'products.subscription'}}<button class="yellowbutton" style="text-transform: uppercase;">Be the Best</button>{{/link-to}}
+        {{#link-to 'products.list'}}<button class="yellowbutton" style="text-transform: uppercase;">Be the Best</button>{{/link-to}}
       </div>
       {{!-- <div class="col-12 col-xl-3">
         <img src="./img/Beard Bark.PNG" style="max-width: 16rem; transform: rotate(-15deg);" alt="">
         <img src="./img/Sandy Cheeks.PNG" style="max-width: 16rem; transform: rotate(35deg); display: block; margin-left: 11rem; margin-top: -9rem;" alt="">
       </div> --}}
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-        <img src="./img/IMG_0584.png" style="max-width: 5rem; transform: rotate(-15deg);" alt="">
-        <img src="./img/IMG_0584.png" style="max-width: 5rem; transform: rotate(35deg); display: block; margin-left: 11rem; margin-top: -9rem;" alt="">
+      <div class="col-12 col-md-12 col-lg-6 col-xl-5" style="padding-left: 0rem; padding-right: 0rem;">
+        {{!-- <img src="./img/IMG_0584.png" style="max-width: 5rem; transform: rotate(-15deg);" alt=""> --}}
+        {{!-- <img src="./img/IMG_0584.png" style="max-width: 5rem; transform: rotate(35deg); display: block; margin-left: 11rem; margin-top: -9rem;" alt=""> --}}
+        <img class="unsplash-img" src="/img/jonathan-zerger-577786-unsplash.jpg" alt="Photo by Jonathan Zerger on Unsplash">
       </div>
     </div>
   </div>
@@ -136,7 +137,7 @@
   </div>
   <div class="row" style="padding-bottom: 10rem; padding-top: 5rem;">
     <div class="col text-center">
-        {{#link-to 'products.subscription'}}<button class="yellowbutton" style="text-transform: uppercase;">Browser Our Products</button>{{/link-to}}
+        {{#link-to 'products.list'}}<button class="yellowbutton" style="text-transform: uppercase;">Browser Our Products</button>{{/link-to}}
     </div>
   </div>
 </div>
@@ -160,45 +161,5 @@
     </div>
   </div>
 </section>
-<section style="background: white; color: rgba(74, 74, 74, 1.0); padding-top: 2rem; padding-bottom: 2rem;">
-  <div class="container">
-    <div class="row">
-      <div class="col text-center">
-        <div class="row">
-          <div class="col-12 col-lg-3" style="
-          padding-right: 1rem;
-          padding-left: 1rem;
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;">
-          © 2019 Pearl's Beard Oil
-          </div>
-        <div class="col" style="
-          padding-right: 1rem;
-          padding-left: 1rem;
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;">
-          Refund Policy
-        </div>
-        <div class="col" style="
-          padding-right: 1rem;
-          padding-left: 1rem;
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;">
-          Terms of Service
-        </div>
-        <div class="col" style="
-          padding-right: 1rem;
-          padding-left: 1rem;
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;">
-          {{#link-to "privacy-policy"}}
-          Privacy Policy
-          {{/link-to}}
-        </div>
-        </div>
 
-      </div>
-    </div>
-  </div>
-</section>
 {{outlet}}

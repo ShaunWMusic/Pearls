@@ -35,6 +35,10 @@ Router.map(function() {
   this.route('products', function() {
     this.route('subscription');
     this.route('one-time-purchase');
+    this.route('beard-bark');
+    this.route('sandy-cheeks');
+    this.route('list');
+    this.route('oldpage');
   });
   this.route('video-announcement');
 

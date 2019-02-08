@@ -33,6 +33,7 @@ actions: {
       description: product,
       name: email
     });
+    debugger;
     user.save()
     .then((user) => {
       this.transitionToRoute('checkout-complete.one-time-purchase');

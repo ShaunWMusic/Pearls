@@ -527,3 +527,47 @@ ul {
   margin-right: 1rem;
   margin-left: 1rem;
 }
+
+.click-product {
+  
+  &:hover {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+ 
+}
+
+
+.unsplash-img {
+@media screen and (max-width: 991px) {
+    margin-top: 2rem;
+    object-fit: cover;
+    height: 44rem;
+    width: 33rem;
+    object-position: top;
+    border-radius: 10rem 160rem 0rem;
+  }
+
+@media screen and (min-width: 991px) {
+    max-width: 25rem;
+    margin-top: 2rem;
+    object-fit: cover;
+    height: 29rem;
+    width: 30rem;
+    object-position: top;
+    border-radius: 10rem 160rem 0rem;
+}
+
+}
+
+.hideOnMobile {
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}
+
+.hideOnDesktop {
+  @media screen and (min-width: 991px) {
+    display: none;
+  }
+}

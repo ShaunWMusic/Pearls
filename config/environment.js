@@ -2,8 +2,12 @@
 'use strict';
 module.exports = function(environment) {
   let ENV = {
-    
-    
+    DS: {
+    // localhost
+    // host: 'http://localhost:3000',
+    // Production API
+    host: 'https://thawing-tor-75666.herokuapp.com',
+    },
     modulePrefix: 'pearls-beard-oil',
     environment,
     rootURL: '/',
@@ -27,11 +31,13 @@ module.exports = function(environment) {
       key: process.env.STRIPE_KEY,
     },
 
+    'ember-simple-auth': {
+      authorizer: 'authorization:token'
+    },
+
     'ember-simple-auth-token': {
       identificationField: 'email',
       passwordField: 'password',
-      // serverTokenEndpoint: 'http://localhost:3000/session',
-      serverTokenEndpoint: 'https://thawing-tor-75666.herokuapp.com/session',
       headers: {
         'Content-Type': 'application/vnd.api+json',
         'Accept': 'application/vnd.api+json'
@@ -63,6 +69,9 @@ module.exports = function(environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }
+
+  ENV['ember-simple-auth-token'].serverTokenEndpoint = `${ENV.DS.host}/session`;
+
 
   return ENV;
 };

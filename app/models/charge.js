@@ -6,6 +6,7 @@ export default DS.Model.extend({
   currency: DS.attr(), 
   source: DS.attr(),
   receiptEmail: DS.attr(), 
+  product: DS.attr(), 
   trackingNumber: DS.attr(),
   updatedAt: DS.attr(),
   createdAt: DS.attr() 
