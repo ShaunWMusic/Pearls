@@ -23,6 +23,42 @@
       {{else}}
         <h4 style="margin-top: 1rem;">$10.99 / month</h4>
       {{/if}}
+
+        <div class="row justify-center" style="margin-bottom: 0rem;">
+          <div class="col">
+            <p style="margin-bottom: 0rem;">{{fa-icon 'check'}} Free Shipping</p>
+          </div>
+        </div>
+        <div class="row justify-center" style="margin-bottom: 0rem;">
+          <div class="col">
+            <p style="margin-bottom: 0rem;">{{fa-icon 'check'}} Cancel Anytime</p>
+          </div>
+        </div>
+        {{#if (eq model.payment "one-time purchase")}}
+        <div class="row justify-center" style="margin-bottom: 1.5rem;">
+          <div class="col">
+            {{fa-icon 'check'}} 100% Money Back Guarantee
+          </div>
+        </div>
+        {{else if (eq model.payment "subscription")}}
+        <div class="row justify-center" style="margin-bottom: 0rem;">
+          <div class="col">
+            {{fa-icon 'check'}} 100% Money Back Guarantee
+          </div>
+        </div>
+        <div class="row justify-center" style="margin-bottom: 1.5rem;">
+          <div class="col">
+            {{fa-icon 'check'}} Free Pearl's Beard Oil Sticker
+          </div>
+        </div>
+        {{else}}
+        <div class="row justify-center" style="margin-bottom: 1.5rem;">
+          <div class="col">
+            {{fa-icon 'check'}} 100% Money Back Guarantee
+          </div>
+        </div>
+        {{/if}}
+
       <form class=" text-center" onsubmit={{action "processStripeToken"}} style="max-width: 17rem; margin-left: auto; margin-right: auto;">
         
         {{#power-select
