@@ -101,6 +101,20 @@
         <div class="yellowbutton">Purchase</div>
         {{/if}}
       </form>
+        <p style="margin-top: 2rem;">
+        ** Orders outside of the U.S. add an additional $10. Also, if your country does not support Stripe. Please try paypal.**
+        </p>
+        <div>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"
+            style="display: inherit; margin-top: inherit;">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="XPU65KSPFJSES">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0"
+              style="padding-left: inherit; border: none;" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        
+        </div>
       <div class="row" style="margin-top: 2rem;">
         <div class="col">
           <h3>Description</h3>
