@@ -19,6 +19,12 @@ reset() {
 payments: ['one-time purchase', 'subscription'],
 
 actions: {
+  subscribeActive() {
+    this.set('model.payment', 'subscription');
+  },
+  onetimepurchaseActive() {
+    this.set('model.payment', 'one-time purchase');
+  },
   selectDivision(selected) {
     this.set('payment', selected);
   },

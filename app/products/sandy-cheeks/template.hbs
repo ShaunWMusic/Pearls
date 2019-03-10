@@ -35,9 +35,14 @@
           </div>
         </div>
         {{#if (eq model.payment "one-time purchase")}}
-        <div class="row justify-center" style="margin-bottom: 1.5rem;">
+        <div class="row justify-center">
           <div class="col">
             {{fa-icon 'check'}} 100% Money Back Guarantee
+          </div>
+        </div>
+        <div class="row justify-center" style="margin-bottom: 1.5rem;">
+          <div class="col">
+            {{fa-icon 'check'}} Free Pearl's Beard Oil Sticker
           </div>
         </div>
         {{else if (eq model.payment "subscription")}}
@@ -61,14 +66,22 @@
 
       <form class=" text-center" onsubmit={{action "processStripeToken"}} style="max-width: 17rem; margin-left: auto; margin-right: auto;">
         
-        {{#power-select
+        {{!-- {{#power-select
         placeholder="Choose Payment Option"
         options=payments
         searchEnabled=false
         selected=model.payment
         onchange=(action (mut model.payment)) as |payment|}}
         {{payment}}
-        {{/power-select}}
+        {{/power-select}} --}}
+        <div class="text-left" style="margin-left: 1.5rem; margin-bottom: 1rem;">
+          <label for="subscriptioninput" onclick={{action "subscribeActive"}} style="cursor: pointer;"><input type="radio"
+              id="subscriptioninput" name="payment" value="subscription" checked><span
+              style="margin-left: 1rem;">Subscription</span></label>
+          <label for="onetimepurchaseinput" onclick={{action "onetimepurchaseActive"}} style="cursor: pointer;"><input
+              type="radio" id="onetimepurchaseinput" name="payment" value="one-time purchase"> <span
+              style="margin-left: 1rem;">One-time Purchase</span></label>
+        </div>
         <br>
         {{#if (eq model.payment "one-time purchase")}}
         

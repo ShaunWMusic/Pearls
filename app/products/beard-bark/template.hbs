@@ -15,6 +15,7 @@
       <p class="hideOnMobile">
         15ml / 0.5 fl oz (1 month supply)
       </p>
+
       
       {{#if (eq model.payment "one-time purchase")}}
         <h4 style="margin-top: 1rem;">$13.99</h4>
@@ -34,9 +35,14 @@
         </div>
       </div>
       {{#if (eq model.payment "one-time purchase")}}
-      <div class="row justify-center" style="margin-bottom: 1.5rem;">
+      <div class="row justify-center">
         <div class="col">
           {{fa-icon 'check'}} 100% Money Back Guarantee
+        </div>
+      </div>
+      <div class="row justify-center" style="margin-bottom: 1.5rem;">
+        <div class="col">
+          {{fa-icon 'check'}} Free Pearl's Beard Oil Sticker
         </div>
       </div>
       {{else if (eq model.payment "subscription")}}
@@ -56,10 +62,11 @@
           {{fa-icon 'check'}} 100% Money Back Guarantee
         </div>
       </div>
+
       {{/if}}
 
       <form class=" text-center" onsubmit={{action "processStripeToken"}} style="max-width: 17rem; margin-left: auto; margin-right: auto;">
-        
+{{!--         
         {{#power-select
         placeholder="Choose Payment Option"
         options=payments
@@ -68,9 +75,11 @@
         onchange=(action (mut model.payment)) as |payment|}}
         {{payment}}
         {{/power-select}}
-        <br>
-        
-        
+        <br> --}}
+        <div class="text-left" style="margin-left: 1.5rem; margin-bottom: 1rem;">
+          <label for="subscriptioninput" onclick={{action "subscribeActive"}} style="cursor: pointer;"><input type="radio" id="subscriptioninput" name="payment" value="subscription" checked><span style="margin-left: 1rem;">Subscription</span></label>
+          <label for="onetimepurchaseinput" onclick={{action "onetimepurchaseActive"}} style="cursor: pointer;"><input type="radio" id="onetimepurchaseinput" name="payment" value="one-time purchase"> <span style="margin-left: 1rem;">One-time Purchase</span></label>
+        </div>
         {{#if (eq model.payment "one-time purchase")}}
         
         {{stripe-checkout
@@ -99,7 +108,7 @@
         }}
         {{else}}
         
-        <div class="yellowbutton">Purchase</div>
+        <div class="yellowbutton" aria-disabled="true">Purchase</div>
         {{/if}}
 
       </form>
