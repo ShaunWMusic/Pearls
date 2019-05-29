@@ -16,7 +16,7 @@
         15ml / 0.5 fl oz (1 month supply)
       </p>
 
-      
+
       {{#if (eq model.payment "one-time purchase")}}
         <h4 style="margin-top: 1rem;">$13.99</h4>
       {{else if (eq model.payment "subscription")}}
@@ -66,7 +66,7 @@
       {{/if}}
 
       <form class=" text-center" onsubmit={{action "processStripeToken"}} style="max-width: 17rem; margin-left: auto; margin-right: auto;">
-{{!--         
+{{!--
         {{#power-select
         placeholder="Choose Payment Option"
         options=payments
