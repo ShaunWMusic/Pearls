@@ -6,7 +6,7 @@ module.exports = function(environment) {
     // localhost
     // host: 'http://localhost:3000',
     // Production API
-    host: 'https://thawing-tor-75666.herokuapp.com',
+      host: 'https://thawing-tor-75666.herokuapp.com',
     },
     modulePrefix: 'pearls-beard-oil',
     environment,
@@ -45,7 +45,7 @@ module.exports = function(environment) {
       refreshAccessTokens: false
     }
   };
-  
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
