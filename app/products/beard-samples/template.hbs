@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row text-center justify-content-center" style="margin-top: 2rem;">
+    <div class="col-12">
+      <h1 class="hideOnDesktop">
+        Beard Oil Samples
+      </h1>
+      <p class="hideOnDesktop">
+
+      </p>
+    </div>
+    <div class="col-12 col-lg-4 order-last order-lg-12 text-center">
+      <h1 class="hideOnMobile">
+        Beard Oil Samples
+      </h1>
+      <p class="hideOnMobile">
+
+      </p>
+
+
+      <h2 style="margin-top: 1rem;">$2.99</h2>
+      <div class="row justify-center" style="margin-bottom: 0rem;">
+        <div class="col">
+          <p style="margin-bottom: 0rem;">{{fa-icon 'check'}} Free Shipping</p>
+        </div>
+      </div>
+      <div class="row justify-center">
+        <div class="col">
+          {{fa-icon 'check'}} 100% Money Back Guarantee
+        </div>
+      </div>
+      <div class="row justify-center" style="margin-bottom: 1.5rem;">
+        <div class="col">
+          {{fa-icon 'check'}} Free Pearl's Beard Oil Sticker
+        </div>
+      </div>
+
+
+      <form class=" text-center" onsubmit={{action "processStripeToken"}}
+        style="max-width: 17rem; margin-left: auto; margin-right: auto;">
+        {{stripe-checkout
+        image="/img/IMG_1961.jpg"
+        name="Pearl's Beard Oil"
+        description="Beard Oil Samples"
+        amount=299
+        label="Buy Now"
+        shippingAddress=true
+        billingAddress=true
+        onToken=(action "processStripeToken")
+        class="yellowbutton"
+        }}
+      </form>
+      <div class="row" style="margin-top: 4rem;">
+        <div class="col">
+          <h3>Description</h3>
+          <p>
+            Beard Oil Samples will include 4 different oils. The 4 oil samples include:
+            Beard Bark, Sandy Cheeks, Macho Mint & Plain Mane.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <img style="
+        max-width: 100%;
+        border: 1px solid #f3a536;
+        object-fit: cover;
+        height: 31rem;
+        " src="./../img/beard-samples.jpg" alt="">
+    </div>
+
+  </div>
+
+  <div class="row justify-content-between" style="margin-top: 2rem;">
+    <div class="col-lg-7 text-left">
+
+    </div>
+  </div>
+</div>
+{{outlet}}
