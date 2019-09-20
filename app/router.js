@@ -39,6 +39,7 @@ Router.map(function() {
     this.route('sandy-cheeks');
     this.route('list');
     this.route('oldpage');
+    this.route('beard-samples');
   });
   this.route('video-announcement');
 
@@ -49,6 +50,7 @@ Router.map(function() {
   this.route('checkout-complete', function() {
     this.route('subscription');
     this.route('one-time-purchase');
+    this.route('one-time-purchase-beard-samples');
   });
   this.route('forgotpassword', { path: '/updatepassword' });
   this.route('passwordresetconfirmation');

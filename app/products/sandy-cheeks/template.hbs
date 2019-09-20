@@ -17,21 +17,18 @@
       </p>
 
       {{#if (eq model.payment "one-time purchase")}}
-        <h4 style="margin-top: 1rem;">$13.99</h4>
+        <h2 style="margin-top: 1rem;">$13.99</h2>
       {{else if (eq model.payment "subscription")}}
-        <h4 style="margin-top: 1rem;">$10.99 / month</h4>
+        <h2 style="margin-top: 1rem; color: red;">$7.99 / month</h2>
+        <h4 style="margin-top: 1rem;"><strike>$10.99 / month</strike></h4>
       {{else}}
-        <h4 style="margin-top: 1rem;">$10.99 / month</h4>
+        <h2 style="margin-top: 1rem; color: red;">$7.99 / month</h2>
+        <h4 style="margin-top: 1rem;"><strike>$10.99 / month</strike></h4>
       {{/if}}
 
         <div class="row justify-center" style="margin-bottom: 0rem;">
           <div class="col">
             <p style="margin-bottom: 0rem;">{{fa-icon 'check'}} Free Shipping</p>
-          </div>
-        </div>
-        <div class="row justify-center" style="margin-bottom: 0rem;">
-          <div class="col">
-            <p style="margin-bottom: 0rem;">{{fa-icon 'check'}} Cancel Anytime</p>
           </div>
         </div>
         {{#if (eq model.payment "one-time purchase")}}
@@ -46,6 +43,11 @@
           </div>
         </div>
         {{else if (eq model.payment "subscription")}}
+        <div class="row justify-center" style="margin-bottom: 0rem;">
+          <div class="col">
+            <p style="margin-bottom: 0rem;">{{fa-icon 'check'}} Cancel Anytime</p>
+          </div>
+        </div>
         <div class="row justify-center" style="margin-bottom: 0rem;">
           <div class="col">
             {{fa-icon 'check'}} 100% Money Back Guarantee
@@ -77,7 +79,7 @@
         <div class="text-left" style="margin-left: 1.5rem; margin-bottom: 1rem;">
           <label for="subscriptioninput" onclick={{action "subscribeActive"}} style="cursor: pointer;"><input type="radio"
               id="subscriptioninput" name="payment" value="subscription" checked><span
-              style="margin-left: 1rem;">Subscription</span></label>
+              style="margin-left: 1rem;">Subscription <strong style="color: red;">28% off!!</strong></span></label>
           <label for="onetimepurchaseinput" onclick={{action "onetimepurchaseActive"}} style="cursor: pointer;"><input
               type="radio" id="onetimepurchaseinput" name="payment" value="one-time purchase"> <span
               style="margin-left: 1rem;">One-time Purchase</span></label>
@@ -102,7 +104,7 @@
         image="/img/IMG_1961.jpg"
         name="Pearl's Beard Oil"
         description="Monthly Subscription"
-        amount=1099
+        amount=799
         label="Subscribe"
         shippingAddress=true
         billingAddress=true

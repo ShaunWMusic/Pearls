@@ -53,7 +53,7 @@ actions: {
 
     // Subscription
     processStripeTokenSubscription({id, email, card, name}){
-    let product = "Beard-Bark";
+    let product = "Beard-Bark-Discount";
     let user = this.store.createRecord('customer', {
       token: id,
       email: email,
@@ -68,7 +68,7 @@ actions: {
       let product = model.product;
       let plan = this.store.createRecord('plan', {product, user});
       plan.set('customer_id', user.id);
-      
+
       plan.save()
        .then((id) => {
           let model = this.model;
@@ -93,4 +93,3 @@ actions: {
 }
 });
 
- 
