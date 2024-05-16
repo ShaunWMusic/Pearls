@@ -1,0 +1,78 @@
+defaults: &defaults
+  docker:
+    - image: circleci/node:10-browsers
+      environment:
+        JOBS: 1
+  working_directory: ~/ember-folder
+
+version: 2
+jobs:
+  checkout_code:
+    <<: *defaults
+    steps:
+      - checkout
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  install_dependencies:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - restore_cache:
+          keys:
+            - ember-folder-node10-v1-{{ checksum "yarn.lock" }}
+      - run: sudo npm install -g bower
+      - run: npm config set spin false
+      - run:
+          name: Yarn Install
+          command: yarn install
+      - run:
+          name: Bower Install
+          command: bower install
+      - save_cache:
+          key: ember-folder-node10-v1-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/ember-folder/node_modules
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Lint Handlebars
+          command: npm run lint:hbs
+      - run:
+          name: Lint JavaScript
+          command: npm run lint:js
+
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Run Tests
+          command: npm run test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - checkout_code
+      - install_dependencies:
+          requires:
+            - checkout_code
+      - test:
+          requires:
+            - install_dependencies
+      - lint:
+          requires:
+            - install_dependencies
